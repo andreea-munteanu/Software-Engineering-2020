@@ -1,4 +1,4 @@
-# Software-Engineering-March-2020
+# Software-Engineering-2020
 
 # Do not commit anything to this repo, first talk to your Scrum Master
 
