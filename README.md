@@ -1,9 +1,8 @@
-# Software-Engineering-2020
+# Software Engineering Project
 
-# Do not commit anything to this repo, first talk to your Scrum Master
+## Product Backlog: https://tinyurl.com/SE-Product-Backlog
 
-# Set your name to your actual name, first name and last name
-
-# Wait for our set of rules for using this repository
-
-# Have a nice day!
+# TRELLO BOARDS:
+## SVM Module: https://trello.com/b/22AzijXa/svm-sprint-board
+## Interface Module: https://trello.com/b/VfiHBjO6/e1-lab5
+## Pre-Processing Module: https://trello.com/b/sUz7WJcQ/ip-project
