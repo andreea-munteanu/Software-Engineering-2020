@@ -8,6 +8,8 @@ import imageio
 import gc
 from skimage.transform import resize
 
+#Inspired after project found at https://github.com/alexlaurence/NIfTI-Image-Converter?fbclid=IwAR23blTyC_R6OQXyPaaJhmE-h3tWta5m2xIG1MPwKuGYqjNFkvyVzlsWy0M
+
 def main(argv):
     for i in range(35, 36):
         inputfile = "C:\\Users\\denis\\Desktop\\CTs\\CTR_TRN_0"+str(i)+".nii.gz"
