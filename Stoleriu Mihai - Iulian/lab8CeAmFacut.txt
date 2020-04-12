@@ -5,7 +5,13 @@ c) Ce planuri aveti in continuare?
 a) In aceasta iteratie am inceput sa ma documentez pe CNN pe partea medicala. Fata de saptamana anterioara
 de la caini si pisici , am luat sa clasific tipul de cancer la sani (am incercat si cu plamani dar mai am de lucrat pe acest fel de imagini).
 Pe baza folderului "Samples" ,modelul este antrenat sa formeze o predictie pentru fiecare categorie din poza : bening, carcinoma in situ,invasive,normal.
+Luam random 10 poze din Samples si pentru fiecare verificam ce este. Puteam de asemenea sa punem o noua imagina pe care sa o clasifice.
 Datele sunt preprocesorate, trainingul modelului si testingul se executa din fisierele ce se afla in acelasi folder cu proiectul .npy.
+
 b) Am avut probleme la clasificarea plamanilor.Incerc sa ma apropii cat mai mult de aceasta tema.
+
 c) Sa termin clasificarea plamanilor. Doresc sa improvizez pe modelul facut pana acum cu pisici si caini si cancer la sani.
+
+PS. am incercat sa incarc tot proiectul dar datele preprocesate sunt prea mari (~7gb). Am atasat in schimb poze cum functioneaza impreuna cu codul sursa.
+
 
