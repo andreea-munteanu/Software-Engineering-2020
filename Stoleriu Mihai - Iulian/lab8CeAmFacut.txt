@@ -1,0 +1,11 @@
+a) Ce ati reusit sa faceti in aceasta iteratie?
+b) Ce probleme ati avut?
+c) Ce planuri aveti in continuare?
+
+a) In aceasta iteratie am inceput sa ma documentez pe CNN pe partea medicala. Fata de saptamana anterioara
+de la caini si pisici , am luat sa clasific tipul de cancer la sani (am incercat si cu plamani dar mai am de lucrat pe acest fel de imagini).
+Pe baza folderului "Samples" ,modelul este antrenat sa formeze o predictie pentru fiecare categorie din poza : bening, carcinoma in situ,invasive,normal.
+Datele sunt preprocesorate, trainingul modelului si testingul se executa din fisierele ce se afla in acelasi folder cu proiectul .npy.
+b) Am avut probleme la clasificarea plamanilor.Incerc sa ma apropii cat mai mult de aceasta tema.
+c) Sa termin clasificarea plamanilor. Doresc sa improvizez pe modelul facut pana acum cu pisici si caini si cancer la sani.
+
