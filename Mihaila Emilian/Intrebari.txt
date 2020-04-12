@@ -1,0 +1,9 @@
+a) Ce ati reusit sa faceti in aceasta iteratie?
+Am incercat sa adaptez programele realizate pana acum(cel cu caini si pisici si cel cu trenuri) la domeniul medical.
+Am gasit date legate de pacienti ce au covid-19, acestea constand in radiografii ale plamanilor, adaugand mai pe urma si radiografii cu plamani sanatosi.
+Si am incercat sa imi dau seama cum se face partea de antrenare, testare si incarcarea a datelor in programe diferite.
+Am incercat sa inlocuiesc datele de la pisici si caini cu informatii despre pacienti testati pozitiv si negativ cu covid-19.
+b) Ce probleme ati avut?
+Nu inteleg cum sa rulez un program separat in mai multe bucati de cod(incarcare,antrenare si testare)
+c) Ce planuri aveti in continuare?
+Sa reusesc sa duc la capat problema cu pacientii diagnosticati cu covid si sa adaptez acest lucru pe pacienti cu tuberculoza.
