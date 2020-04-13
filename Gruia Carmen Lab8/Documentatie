@@ -1,0 +1,14 @@
+Ce ati reusit sa faceti in aceasta iteratie?
+  Pentru acest laborator am cautat modele CNN care sa clasifice si interpreteze imagini din domeniul medical.
+  Am gasit un model ce ofera un diagnostic legat de retinopatica diabetica pe baza unor imagini a unor retine. Astfel, diagnosticul a fost impartit in 4 clasa : 0 - sanatos ( No DR ), 1 - stare blanda ( Mild DR ), 2- stare moderata ( Moderate DR ), 3 -stare severa ( Severe DR ) ,
+4- stare proliferativa ( Proliferative DR ). Nu am putut incarca si datasetul deoarece contine peste 4000 de imagini.
+  Mai multe explicatii si sursa datasetului am gasit la acest link : https://www.kaggle.com/c/aptos2019-blindness-detection/data
+
+  De asemenea, am mai gasit pe github un model CNN ce prelucreaza imagini X-ray, dar sursa datasetului se afla pe un Drive ce a expirat :
+  https://github.com/faust-prime/X-ray-images-classification-with-Keras-TensorFlow/blob/master/CNN_to_Pipeline.ipynb 
+
+Ce probleme ati avut?
+  Mi-am rezolvat problema lucrand in Google Colab, iar fisierele le pot accesa doar din Google Drive asa ca nu pot gestiona din cod anumite modificari ale fisierelor, cum am intalnit in modele, trebuie sa o fac manual.
+
+Ce planuri aveti in continuare?
+   Sa pot sa adaptez aceste modele gasite pana acum pe cerintele si imaginile noastre.
