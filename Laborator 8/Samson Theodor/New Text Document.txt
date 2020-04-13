@@ -1,0 +1,9 @@
+Ce ati reusit sa faceti in aceasta iteratie?
+M-am documentat pe partea de machine learning si am descarcat niste tutoriale despre machine learning si cnn pentru a invata
+pe parcursul saptamanii acestea si in vacanta.
+
+Ce probleme ati avut?
+Nu am avut imagini cu plamani bolnavi si sanatosi pentru a putea face clasificarea
+
+Ce planuri aveti in continuare?
+Sa invat de pe tutoriale cnn si machine learning pentru a nu mai cauta cod pe internet
