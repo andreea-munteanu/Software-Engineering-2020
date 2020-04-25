@@ -14,7 +14,7 @@ import math
 from skimage.transform import resize
 
 
-def allZeros(list):
+def allZeros(list): #folosit pentru a vedea daca o imagine este total neagra
     for elem in list:
         for number in elem:
             if number != 0:
@@ -28,7 +28,6 @@ def slice_lr(image_array, inputfile, outputlr, from_slice, to_slice):
     for current_slice in range(from_slice, to_slice):
         data = numpy.rot90(image_array[current_slice, :, :])
         image_name = inputfile[:-7] + "_z" + "{:0>3}".format(str(current_slice + 1)) + ".png"
-        data = data.astype(numpy.float32)
         data = resize(data, (512, 512))
         imageio.imwrite(image_name, data)
         src = image_name
@@ -42,7 +41,6 @@ def slice_fb(image_array, inputfile, outputfb, from_slice, to_slice):
     for current_slice in range(from_slice, to_slice):
         data = numpy.rot90(image_array[:, current_slice, :])
         image_name = inputfile[:-7] + "_z" + "{:0>3}".format(str(current_slice + 1)) + ".png"
-        data = data.astype(numpy.float32)
         data = resize(data, (512, 512))
         imageio.imwrite(image_name, data)
         # move images to folder
@@ -55,7 +53,6 @@ def slice_tb(image_array, inputfile, outputtb, from_slice, to_slice):
     if to_slice > image_array.shape[2]:
         to_slice = image_array.shape[2]
     for current_slice in range(from_slice, to_slice):
-        # alternate slices
         data = image_array[:, :, current_slice]
         image_name = inputfile[:-7] + "_z" + "{:0>3}".format(str(current_slice + 1)) + ".png"
         data = data.astype(numpy.float32)
@@ -67,13 +64,21 @@ def slice_tb(image_array, inputfile, outputtb, from_slice, to_slice):
 
 
 def main(argv):
-    number_of_threads = 4  # Number of threads used
-    toScan = [98,105,109,116,130,131,139,141,159,160,162]
+    #number_of_threads = 4  # Number of threads used
+
+    #in toScan se vor adauga toate CTR-urile care trebuie scanate
+
+    #A fost modificat astfel incat sa fie nevoie doar de o singura rulare per pacient
+
+    #Daca in toScan adaugi 201, el va scana si transforma si CT-ul, si mastile1, si mastile2
+
+    #Trebuie precizat folder-ul de input pentru fiecare dintre ele
+
+    toScan = [98,105]
     for i in toScan:
         inputfileM1 = "C:\\Users\\denis\\Desktop\\Masks1\\"  # Scans location
         inputfileM2 = "C:\\Users\\denis\\Desktop\\Masks2\\"
         inputfileCT = "C:\\Users\\denis\\Desktop\\CTs\\"
-        # Scan number
         if i < 10:
             j = "00" + str(i)
         elif i < 100:
