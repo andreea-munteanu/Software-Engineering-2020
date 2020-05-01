@@ -56,13 +56,14 @@ def separateLungs(dir):
 
 def main(argv):
     threads = []
-    for root, dirs, file in os.walk("C:\\Users\\Dan\\Desktop\\test"): #To change acording to location on your computer
+    for root, dirs, file in os.walk("C:\\Users\\denis\\Desktop\\Software-Engineering2020\\TrainCTRs\\ToSplit"): #To change acording to location on your computer
         if "Mask1" in root and isFinalDir(root):
             t = Thread(target=separateLungs, args=(root,))
             t.start()
             threads.append(t)
     for t in threads:
         t.join()
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
