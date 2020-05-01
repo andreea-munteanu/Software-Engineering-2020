@@ -1,6 +1,7 @@
 import os
 import shutil
 import sys
+from threading import Thread
 from PIL import Image
 
 
@@ -9,6 +10,7 @@ def isFinalDir(inputDir):
         if os.path.isdir(os.path.join(inputDir, fname)):
             return False
     return True
+
 
 def separateLungs(dir):
     if "FrontBack" in dir:
@@ -51,10 +53,14 @@ def separateLungs(dir):
 
 
 def main(argv):
-    for root, dirs, file in os.walk("D:\\Software-Engineering-20200\\TrainCTRs"):
+    threads = []
+    for root, dirs, file in os.walk("C:\\Users\\Dan\\Desktop\\test"):
         if "Mask1" in root and isFinalDir(root):
-             separateLungs(root)
-
+            t = Thread(target=separateLungs, args=(root,))
+            t.start()
+            threads.append(t)
+    for t in threads:
+        t.join()
 
 if __name__ == "__main__":
     main(sys.argv[1:])
