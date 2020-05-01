@@ -42,6 +42,8 @@ def separateLungs(dir):
             for j in range(512):
                 if left[i, j] != 0 and left[i, j] != 127:
                     left[i, j] = 0
+                if image[i, j] == 127:
+                    image[i, j] = 255
                 if right[i, j] != 0 and right[i, j] != 255:
                     right[i, j] = 0
         if "FrontBack" in dir:
