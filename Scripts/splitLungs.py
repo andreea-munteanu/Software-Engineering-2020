@@ -56,7 +56,7 @@ def separateLungs(dir):
 
 def main(argv):
     threads = []
-    for root, dirs, file in os.walk("C:\\Users\\Dan\\Desktop\\test"): #To change acording to location on your computer
+    for root, dirs, file in os.walk("C:\\Users\\Elax\\Desktop\\Facultate\\Anul 2\\Sem 2\\Software Engineering\\111-123"): #To change acording to location on your computer
         if "Mask1" in root and isFinalDir(root):
             t = Thread(target=separateLungs, args=(root,))
             t.start()
