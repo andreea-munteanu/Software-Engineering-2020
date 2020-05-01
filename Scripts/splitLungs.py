@@ -42,8 +42,8 @@ def separateLungs(dir):
             for j in range(512):
                 if left[i, j] != 0 and left[i, j] != 127:
                     left[i, j] = 0
-                if image[i, j] == 127:
-                    image[i, j] = 255
+                if left[i, j] == 127:
+                    left[i, j] = 255
                 if right[i, j] != 0 and right[i, j] != 255:
                     right[i, j] = 0
         if "FrontBack" in dir:
@@ -56,7 +56,7 @@ def separateLungs(dir):
 
 def main(argv):
     threads = []
-    for root, dirs, file in os.walk("C:\\Users\\Dan\\Desktop\\test"):
+    for root, dirs, file in os.walk("C:\\Users\\Dan\\Desktop\\test"): #To change acording to location on your computer
         if "Mask1" in root and isFinalDir(root):
             t = Thread(target=separateLungs, args=(root,))
             t.start()
