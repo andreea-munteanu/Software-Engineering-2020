@@ -1,11 +1,7 @@
-import cv2
+# Version 1.1
 import os
 
-path_test = 'C:\\Users\\User\\Downloads\\Software-Engineering-2020-Pre-Processing\\Software-Engineering-2020-Pre-Processing\\TrainCTRs'
-paths = ['C:\\Users\\User\\Downloads\\Software-Engineering-2020-Pre-Processing\\Software-Engineering-2020-Pre'
-         '-Processing\\Right',
-         'C:\\Users\\User\\Downloads\\Software-Engineering-2020-Pre-Processing\\Software-Engineering-2020-Pre'
-         '-Processing\\Left']
+import cv2
 
 
 def count_files_dirs_walk(path, target):
@@ -31,4 +27,15 @@ def count_files_dirs_walk(path, target):
                         cv2.imwrite(__end + '\\' + name, dst1)
 
 
-count_files_dirs_walk(path_test, paths)
+def apply_masks():
+    paths_train_source = 'D:\\JetBrains\\FII\\Git\\Software-Engineering-2020\\TrainCTRs'
+    paths_train_target = ['D:\\JetBrains\\FII\\Git\\Software-Engineering-2020\\Right',
+                          'D:\\JetBrains\\FII\\Git\\Software-Engineering-2020\\Left']
+    paths_test_source = 'D:\\JetBrains\\FII\\Git\\Software-Engineering-2020\\TestCTRs'
+    paths_test_target = ['D:\\JetBrains\\FII\\Git\\Software-Engineering-2020\\Test\\Right',
+                         'D:\\JetBrains\\FII\\Git\\Software-Engineering-2020\\Test\\Left']
+    paths = [[paths_train_source, paths_train_target], [paths_test_source, paths_test_target]]
+    print('Applying masks...')
+    for path in paths:
+        count_files_dirs_walk(path[0], path[1])
+    print('Masks applied')
