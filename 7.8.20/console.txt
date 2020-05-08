@@ -1,0 +1,992 @@
+C:\Miniconda\envs\tensorflow\python.exe C:/Users/Yoleq/PycharmProjects/lab8newnew/new.py
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+001
+002
+003
+004
+005
+006
+007
+008
+009
+010
+011
+012
+013
+014
+015
+016
+017
+018
+019
+020
+021
+022
+023
+024
+025
+026
+027
+028
+029
+030
+031
+032
+033
+034
+035
+036
+037
+038
+039
+040
+041
+042
+043
+044
+045
+046
+047
+048
+049
+050
+051
+052
+053
+054
+055
+056
+057
+058
+059
+060
+061
+062
+063
+064
+065
+066
+067
+068
+069
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+080
+081
+082
+083
+084
+085
+086
+087
+088
+089
+090
+091
+092
+093
+094
+095
+096
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+12959
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\helpers\summarizer.py:9: The name tf.summary.merge is deprecated. Please use tf.compat.v1.summary.merge instead.
+
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\helpers\trainer.py:25: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\collections.py:13: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+curses is not supported on this machine (please install/reinstall curses for an optimal experience)
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\config.py:123: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\config.py:129: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\config.py:131: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From C:/Users/Yoleq/PycharmProjects/lab8newnew/new.py:161: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\initializations.py:119: calling UniformUnitScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tensorflow\python\util\deprecation.py:507: UniformUnitScaling.__init__ (from tensorflow.python.ops.init_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.initializers.variance_scaling instead with distribution=uniform to get equivalent behavior.
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\layers\conv.py:552: The name tf.nn.max_pool is deprecated. Please use tf.nn.max_pool2d instead.
+
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\initializations.py:174: calling TruncatedNormal.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\layers\core.py:239: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\optimizers.py:238: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\objectives.py:66: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+2020-05-07 23:06:48.071895: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\summaries.py:46: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tensorflow\python\ops\math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From C:\Miniconda\envs\tensorflow\lib\site-packages\tflearn\helpers\trainer.py:134: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+---------------------------------
+Run id: model(tuberculosis)-0.001-5conv-basic.model
+Log directory: log/
+---------------------------------
+Training samples: 11959
+Validation samples: 1000
+--
+Training Step: 1  | time: 0.224s
+| Adam | epoch: 001 | loss: 0.00000 - acc: 0.0000 -- iter: 00064/11959
+Training Step: 2  | total loss: 0.62086 | time: 0.263s
+| Adam | epoch: 001 | loss: 0.62086 - acc: 0.6609 -- iter: 00128/11959
+Training Step: 3  | total loss: 0.60529 | time: 0.301s
+| Adam | epoch: 001 | loss: 0.60529 - acc: 0.7722 -- iter: 00192/11959
+Training Step: 4  | total loss: 0.61069 | time: 0.340s
+| Adam | epoch: 001 | loss: 0.61069 - acc: 0.7555 -- iter: 00256/11959
+Training Step: 5  | total loss: 0.61872 | time: 0.377s
+| Adam | epoch: 001 | loss: 0.61872 - acc: 0.7193 -- iter: 00320/11959
+Training Step: 6  | total loss: 0.63354 | time: 0.417s
+| Adam | epoch: 001 | loss: 0.63354 - acc: 0.6788 -- iter: 00384/11959
+Training Step: 7  | total loss: 0.63509 | time: 0.462s
+| Adam | epoch: 001 | loss: 0.63509 - acc: 0.6840 -- iter: 00448/11959
+Training Step: 8  | total loss: 0.61619 | time: 0.501s
+| Adam | epoch: 001 | loss: 0.61619 - acc: 0.7387 -- iter: 00512/11959
+Training Step: 9  | total loss: 0.61108 | time: 0.538s
+| Adam | epoch: 001 | loss: 0.61108 - acc: 0.7199 -- iter: 00576/11959
+Training Step: 10  | total loss: 0.62773 | time: 0.576s
+| Adam | epoch: 001 | loss: 0.62773 - acc: 0.6959 -- iter: 00640/11959
+Training Step: 11  | total loss: 0.55254 | time: 0.613s
+| Adam | epoch: 001 | loss: 0.55254 - acc: 0.7733 -- iter: 00704/11959
+Training Step: 12  | total loss: 0.54850 | time: 0.652s
+| Adam | epoch: 001 | loss: 0.54850 - acc: 0.7558 -- iter: 00768/11959
+Training Step: 13  | total loss: 0.54894 | time: 0.695s
+| Adam | epoch: 001 | loss: 0.54894 - acc: 0.7667 -- iter: 00832/11959
+Training Step: 14  | total loss: 0.63359 | time: 0.736s
+| Adam | epoch: 001 | loss: 0.63359 - acc: 0.7343 -- iter: 00896/11959
+Training Step: 15  | total loss: 0.65555 | time: 0.779s
+| Adam | epoch: 001 | loss: 0.65555 - acc: 0.7099 -- iter: 00960/11959
+Training Step: 16  | total loss: 0.63879 | time: 0.821s
+| Adam | epoch: 001 | loss: 0.63879 - acc: 0.7308 -- iter: 01024/11959
+Training Step: 17  | total loss: 0.64847 | time: 0.861s
+| Adam | epoch: 001 | loss: 0.64847 - acc: 0.7039 -- iter: 01088/11959
+Training Step: 18  | total loss: 0.65514 | time: 0.901s
+| Adam | epoch: 001 | loss: 0.65514 - acc: 0.6928 -- iter: 01152/11959
+Training Step: 19  | total loss: 0.65173 | time: 0.943s
+| Adam | epoch: 001 | loss: 0.65173 - acc: 0.6963 -- iter: 01216/11959
+Training Step: 20  | total loss: 0.64644 | time: 0.986s
+| Adam | epoch: 001 | loss: 0.64644 - acc: 0.7186 -- iter: 01280/11959
+Training Step: 21  | total loss: 0.64962 | time: 1.025s
+| Adam | epoch: 001 | loss: 0.64962 - acc: 0.7186 -- iter: 01344/11959
+Training Step: 22  | total loss: 0.65534 | time: 1.064s
+| Adam | epoch: 001 | loss: 0.65534 - acc: 0.6952 -- iter: 01408/11959
+Training Step: 23  | total loss: 0.65993 | time: 1.102s
+| Adam | epoch: 001 | loss: 0.65993 - acc: 0.6794 -- iter: 01472/11959
+Training Step: 24  | total loss: 0.66155 | time: 1.142s
+| Adam | epoch: 001 | loss: 0.66155 - acc: 0.6773 -- iter: 01536/11959
+Training Step: 25  | total loss: 0.66092 | time: 1.185s
+| Adam | epoch: 001 | loss: 0.66092 - acc: 0.6715 -- iter: 01600/11959
+Training Step: 26  | total loss: 0.65115 | time: 1.225s
+| Adam | epoch: 001 | loss: 0.65115 - acc: 0.7006 -- iter: 01664/11959
+Training Step: 27  | total loss: 0.64395 | time: 1.263s
+| Adam | epoch: 001 | loss: 0.64395 - acc: 0.7093 -- iter: 01728/11959
+Training Step: 28  | total loss: 0.63220 | time: 1.301s
+| Adam | epoch: 001 | loss: 0.63220 - acc: 0.7195 -- iter: 01792/11959
+Training Step: 29  | total loss: 0.61788 | time: 1.339s
+| Adam | epoch: 001 | loss: 0.61788 - acc: 0.7345 -- iter: 01856/11959
+Training Step: 30  | total loss: 0.62685 | time: 1.390s
+| Adam | epoch: 001 | loss: 0.62685 - acc: 0.7197 -- iter: 01920/11959
+Training Step: 31  | total loss: 0.63576 | time: 1.436s
+| Adam | epoch: 001 | loss: 0.63576 - acc: 0.7122 -- iter: 01984/11959
+Training Step: 32  | total loss: 0.62837 | time: 1.478s
+| Adam | epoch: 001 | loss: 0.62837 - acc: 0.7137 -- iter: 02048/11959
+Training Step: 33  | total loss: 0.61093 | time: 1.516s
+| Adam | epoch: 001 | loss: 0.61093 - acc: 0.7217 -- iter: 02112/11959
+Training Step: 34  | total loss: 0.61947 | time: 1.556s
+| Adam | epoch: 001 | loss: 0.61947 - acc: 0.7177 -- iter: 02176/11959
+Training Step: 35  | total loss: 0.64587 | time: 1.598s
+| Adam | epoch: 001 | loss: 0.64587 - acc: 0.6852 -- iter: 02240/11959
+Training Step: 36  | total loss: 0.64491 | time: 1.641s
+| Adam | epoch: 001 | loss: 0.64491 - acc: 0.6825 -- iter: 02304/11959
+Training Step: 37  | total loss: 0.63846 | time: 1.681s
+| Adam | epoch: 001 | loss: 0.63846 - acc: 0.6929 -- iter: 02368/11959
+Training Step: 38  | total loss: 0.63390 | time: 1.719s
+| Adam | epoch: 001 | loss: 0.63390 - acc: 0.6979 -- iter: 02432/11959
+Training Step: 39  | total loss: 0.62704 | time: 1.758s
+| Adam | epoch: 001 | loss: 0.62704 - acc: 0.7139 -- iter: 02496/11959
+Training Step: 40  | total loss: 0.61821 | time: 1.803s
+| Adam | epoch: 001 | loss: 0.61821 - acc: 0.7294 -- iter: 02560/11959
+Training Step: 41  | total loss: 0.62810 | time: 1.846s
+| Adam | epoch: 001 | loss: 0.62810 - acc: 0.7103 -- iter: 02624/11959
+Training Step: 42  | total loss: 0.62487 | time: 1.889s
+| Adam | epoch: 001 | loss: 0.62487 - acc: 0.7118 -- iter: 02688/11959
+Training Step: 43  | total loss: 0.61706 | time: 1.929s
+| Adam | epoch: 001 | loss: 0.61706 - acc: 0.7268 -- iter: 02752/11959
+Training Step: 44  | total loss: 0.61635 | time: 1.969s
+| Adam | epoch: 001 | loss: 0.61635 - acc: 0.7227 -- iter: 02816/11959
+Training Step: 45  | total loss: 0.62196 | time: 2.011s
+| Adam | epoch: 001 | loss: 0.62196 - acc: 0.7114 -- iter: 02880/11959
+Training Step: 46  | total loss: 0.62389 | time: 2.055s
+| Adam | epoch: 001 | loss: 0.62389 - acc: 0.7100 -- iter: 02944/11959
+Training Step: 47  | total loss: 0.62168 | time: 2.095s
+| Adam | epoch: 001 | loss: 0.62168 - acc: 0.7115 -- iter: 03008/11959
+Training Step: 48  | total loss: 0.62872 | time: 2.134s
+| Adam | epoch: 001 | loss: 0.62872 - acc: 0.7026 -- iter: 03072/11959
+Training Step: 49  | total loss: 0.61074 | time: 2.173s
+| Adam | epoch: 001 | loss: 0.61074 - acc: 0.7199 -- iter: 03136/11959
+Training Step: 50  | total loss: 0.60322 | time: 2.215s
+| Adam | epoch: 001 | loss: 0.60322 - acc: 0.7246 -- iter: 03200/11959
+Training Step: 51  | total loss: 0.59397 | time: 2.261s
+| Adam | epoch: 001 | loss: 0.59397 - acc: 0.7309 -- iter: 03264/11959
+Training Step: 52  | total loss: 0.59405 | time: 2.300s
+| Adam | epoch: 001 | loss: 0.59405 - acc: 0.7361 -- iter: 03328/11959
+Training Step: 53  | total loss: 0.59469 | time: 2.338s
+| Adam | epoch: 001 | loss: 0.59469 - acc: 0.7335 -- iter: 03392/11959
+Training Step: 54  | total loss: 0.59401 | time: 2.376s
+| Adam | epoch: 001 | loss: 0.59401 - acc: 0.7336 -- iter: 03456/11959
+Training Step: 55  | total loss: 0.59900 | time: 2.423s
+| Adam | epoch: 001 | loss: 0.59900 - acc: 0.7271 -- iter: 03520/11959
+Training Step: 56  | total loss: 0.60863 | time: 2.467s
+| Adam | epoch: 001 | loss: 0.60863 - acc: 0.7171 -- iter: 03584/11959
+Training Step: 57  | total loss: 0.61664 | time: 2.510s
+| Adam | epoch: 001 | loss: 0.61664 - acc: 0.7043 -- iter: 03648/11959
+Training Step: 58  | total loss: 0.60922 | time: 2.555s
+| Adam | epoch: 001 | loss: 0.60922 - acc: 0.7148 -- iter: 03712/11959
+Training Step: 59  | total loss: 0.60964 | time: 2.595s
+| Adam | epoch: 001 | loss: 0.60964 - acc: 0.7133 -- iter: 03776/11959
+Training Step: 60  | total loss: 0.61065 | time: 2.640s
+| Adam | epoch: 001 | loss: 0.61065 - acc: 0.7099 -- iter: 03840/11959
+Training Step: 61  | total loss: 0.61029 | time: 2.682s
+| Adam | epoch: 001 | loss: 0.61029 - acc: 0.7090 -- iter: 03904/11959
+Training Step: 62  | total loss: 0.60788 | time: 2.721s
+| Adam | epoch: 001 | loss: 0.60788 - acc: 0.7122 -- iter: 03968/11959
+Training Step: 63  | total loss: 0.60212 | time: 2.760s
+| Adam | epoch: 001 | loss: 0.60212 - acc: 0.7210 -- iter: 04032/11959
+Training Step: 64  | total loss: 0.60425 | time: 2.800s
+| Adam | epoch: 001 | loss: 0.60425 - acc: 0.7168 -- iter: 04096/11959
+Training Step: 65  | total loss: 0.60125 | time: 2.841s
+| Adam | epoch: 001 | loss: 0.60125 - acc: 0.7190 -- iter: 04160/11959
+Training Step: 66  | total loss: 0.60121 | time: 2.884s
+| Adam | epoch: 001 | loss: 0.60121 - acc: 0.7208 -- iter: 04224/11959
+Training Step: 67  | total loss: 0.60981 | time: 2.923s
+| Adam | epoch: 001 | loss: 0.60981 - acc: 0.7131 -- iter: 04288/11959
+Training Step: 68  | total loss: 0.60667 | time: 2.963s
+| Adam | epoch: 001 | loss: 0.60667 - acc: 0.7156 -- iter: 04352/11959
+Training Step: 69  | total loss: 0.59334 | time: 3.002s
+| Adam | epoch: 001 | loss: 0.59334 - acc: 0.7269 -- iter: 04416/11959
+Training Step: 70  | total loss: 0.59369 | time: 3.044s
+| Adam | epoch: 001 | loss: 0.59369 - acc: 0.7278 -- iter: 04480/11959
+Training Step: 71  | total loss: 0.59985 | time: 3.087s
+| Adam | epoch: 001 | loss: 0.59985 - acc: 0.7214 -- iter: 04544/11959
+Training Step: 72  | total loss: 0.59505 | time: 3.127s
+| Adam | epoch: 001 | loss: 0.59505 - acc: 0.7246 -- iter: 04608/11959
+Training Step: 73  | total loss: 0.58727 | time: 3.166s
+| Adam | epoch: 001 | loss: 0.58727 - acc: 0.7327 -- iter: 04672/11959
+Training Step: 74  | total loss: 0.59773 | time: 3.205s
+| Adam | epoch: 001 | loss: 0.59773 - acc: 0.7191 -- iter: 04736/11959
+Training Step: 75  | total loss: 0.59376 | time: 3.246s
+| Adam | epoch: 001 | loss: 0.59376 - acc: 0.7225 -- iter: 04800/11959
+Training Step: 76  | total loss: 0.59258 | time: 3.290s
+| Adam | epoch: 001 | loss: 0.59258 - acc: 0.7221 -- iter: 04864/11959
+Training Step: 77  | total loss: 0.59838 | time: 3.330s
+| Adam | epoch: 001 | loss: 0.59838 - acc: 0.7135 -- iter: 04928/11959
+Training Step: 78  | total loss: 0.59716 | time: 3.370s
+| Adam | epoch: 001 | loss: 0.59716 - acc: 0.7140 -- iter: 04992/11959
+Training Step: 79  | total loss: 0.59779 | time: 3.407s
+| Adam | epoch: 001 | loss: 0.59779 - acc: 0.7129 -- iter: 05056/11959
+Training Step: 80  | total loss: 0.58959 | time: 3.453s
+| Adam | epoch: 001 | loss: 0.58959 - acc: 0.7231 -- iter: 05120/11959
+Training Step: 81  | total loss: 0.58833 | time: 3.497s
+| Adam | epoch: 001 | loss: 0.58833 - acc: 0.7211 -- iter: 05184/11959
+Training Step: 82  | total loss: 0.58331 | time: 3.536s
+| Adam | epoch: 001 | loss: 0.58331 - acc: 0.7271 -- iter: 05248/11959
+Training Step: 83  | total loss: 0.58663 | time: 3.576s
+| Adam | epoch: 001 | loss: 0.58663 - acc: 0.7231 -- iter: 05312/11959
+Training Step: 84  | total loss: 0.58926 | time: 3.616s
+| Adam | epoch: 001 | loss: 0.58926 - acc: 0.7196 -- iter: 05376/11959
+Training Step: 85  | total loss: 0.58974 | time: 3.655s
+| Adam | epoch: 001 | loss: 0.58974 - acc: 0.7163 -- iter: 05440/11959
+Training Step: 86  | total loss: 0.59647 | time: 3.696s
+| Adam | epoch: 001 | loss: 0.59647 - acc: 0.7119 -- iter: 05504/11959
+Training Step: 87  | total loss: 0.59904 | time: 3.739s
+| Adam | epoch: 001 | loss: 0.59904 - acc: 0.7126 -- iter: 05568/11959
+Training Step: 88  | total loss: 0.59875 | time: 3.781s
+| Adam | epoch: 001 | loss: 0.59875 - acc: 0.7148 -- iter: 05632/11959
+Training Step: 89  | total loss: 0.60413 | time: 3.822s
+| Adam | epoch: 001 | loss: 0.60413 - acc: 0.7074 -- iter: 05696/11959
+Training Step: 90  | total loss: 0.60321 | time: 3.861s
+| Adam | epoch: 001 | loss: 0.60321 - acc: 0.7132 -- iter: 05760/11959
+Training Step: 91  | total loss: 0.60126 | time: 3.904s
+| Adam | epoch: 001 | loss: 0.60126 - acc: 0.7200 -- iter: 05824/11959
+Training Step: 92  | total loss: 0.60835 | time: 3.950s
+| Adam | epoch: 001 | loss: 0.60835 - acc: 0.7089 -- iter: 05888/11959
+Training Step: 93  | total loss: 0.61358 | time: 3.991s
+| Adam | epoch: 001 | loss: 0.61358 - acc: 0.7021 -- iter: 05952/11959
+Training Step: 94  | total loss: 0.61094 | time: 4.031s
+| Adam | epoch: 001 | loss: 0.61094 - acc: 0.7053 -- iter: 06016/11959
+Training Step: 95  | total loss: 0.61315 | time: 4.073s
+| Adam | epoch: 001 | loss: 0.61315 - acc: 0.7035 -- iter: 06080/11959
+Training Step: 96  | total loss: 0.60443 | time: 4.113s
+| Adam | epoch: 001 | loss: 0.60443 - acc: 0.7113 -- iter: 06144/11959
+Training Step: 97  | total loss: 0.61012 | time: 4.155s
+| Adam | epoch: 001 | loss: 0.61012 - acc: 0.7042 -- iter: 06208/11959
+Training Step: 98  | total loss: 0.60676 | time: 4.196s
+| Adam | epoch: 001 | loss: 0.60676 - acc: 0.7073 -- iter: 06272/11959
+Training Step: 99  | total loss: 0.59936 | time: 4.235s
+| Adam | epoch: 001 | loss: 0.59936 - acc: 0.7147 -- iter: 06336/11959
+Training Step: 100  | total loss: 0.59255 | time: 4.274s
+| Adam | epoch: 001 | loss: 0.59255 - acc: 0.7213 -- iter: 06400/11959
+Training Step: 101  | total loss: 0.58566 | time: 4.315s
+| Adam | epoch: 001 | loss: 0.58566 - acc: 0.7273 -- iter: 06464/11959
+Training Step: 102  | total loss: 0.57686 | time: 4.357s
+| Adam | epoch: 001 | loss: 0.57686 - acc: 0.7358 -- iter: 06528/11959
+Training Step: 103  | total loss: 0.57531 | time: 4.399s
+| Adam | epoch: 001 | loss: 0.57531 - acc: 0.7388 -- iter: 06592/11959
+Training Step: 104  | total loss: 0.56685 | time: 4.441s
+| Adam | epoch: 001 | loss: 0.56685 - acc: 0.7462 -- iter: 06656/11959
+Training Step: 105  | total loss: 0.58889 | time: 4.483s
+| Adam | epoch: 001 | loss: 0.58889 - acc: 0.7294 -- iter: 06720/11959
+Training Step: 106  | total loss: 0.58988 | time: 4.525s
+| Adam | epoch: 001 | loss: 0.58988 - acc: 0.7267 -- iter: 06784/11959
+Training Step: 107  | total loss: 0.59570 | time: 4.567s
+| Adam | epoch: 001 | loss: 0.59570 - acc: 0.7181 -- iter: 06848/11959
+Training Step: 108  | total loss: 0.59564 | time: 4.606s
+| Adam | epoch: 001 | loss: 0.59564 - acc: 0.7198 -- iter: 06912/11959
+Training Step: 109  | total loss: 0.59690 | time: 4.645s
+| Adam | epoch: 001 | loss: 0.59690 - acc: 0.7197 -- iter: 06976/11959
+Training Step: 110  | total loss: 0.59780 | time: 4.686s
+| Adam | epoch: 001 | loss: 0.59780 - acc: 0.7196 -- iter: 07040/11959
+Training Step: 111  | total loss: 0.59969 | time: 4.729s
+| Adam | epoch: 001 | loss: 0.59969 - acc: 0.7179 -- iter: 07104/11959
+Training Step: 112  | total loss: 0.60202 | time: 4.774s
+| Adam | epoch: 001 | loss: 0.60202 - acc: 0.7164 -- iter: 07168/11959
+Training Step: 113  | total loss: 0.60143 | time: 4.814s
+| Adam | epoch: 001 | loss: 0.60143 - acc: 0.7198 -- iter: 07232/11959
+Training Step: 114  | total loss: 0.59953 | time: 4.853s
+| Adam | epoch: 001 | loss: 0.59953 - acc: 0.7244 -- iter: 07296/11959
+Training Step: 115  | total loss: 0.60526 | time: 4.897s
+| Adam | epoch: 001 | loss: 0.60526 - acc: 0.7144 -- iter: 07360/11959
+Training Step: 116  | total loss: 0.61020 | time: 4.938s
+| Adam | epoch: 001 | loss: 0.61020 - acc: 0.7055 -- iter: 07424/11959
+Training Step: 117  | total loss: 0.61279 | time: 4.981s
+| Adam | epoch: 001 | loss: 0.61279 - acc: 0.7021 -- iter: 07488/11959
+Training Step: 118  | total loss: 0.60731 | time: 5.022s
+| Adam | epoch: 001 | loss: 0.60731 - acc: 0.7085 -- iter: 07552/11959
+Training Step: 119  | total loss: 0.60820 | time: 5.061s
+| Adam | epoch: 001 | loss: 0.60820 - acc: 0.7064 -- iter: 07616/11959
+Training Step: 120  | total loss: 0.60619 | time: 5.098s
+| Adam | epoch: 001 | loss: 0.60619 - acc: 0.7076 -- iter: 07680/11959
+Training Step: 121  | total loss: 0.59846 | time: 5.137s
+| Adam | epoch: 001 | loss: 0.59846 - acc: 0.7165 -- iter: 07744/11959
+Training Step: 122  | total loss: 0.60100 | time: 5.180s
+| Adam | epoch: 001 | loss: 0.60100 - acc: 0.7136 -- iter: 07808/11959
+Training Step: 123  | total loss: 0.60548 | time: 5.219s
+| Adam | epoch: 001 | loss: 0.60548 - acc: 0.7079 -- iter: 07872/11959
+Training Step: 124  | total loss: 0.60025 | time: 5.258s
+| Adam | epoch: 001 | loss: 0.60025 - acc: 0.7121 -- iter: 07936/11959
+Training Step: 125  | total loss: 0.60211 | time: 5.298s
+| Adam | epoch: 001 | loss: 0.60211 - acc: 0.7097 -- iter: 08000/11959
+Training Step: 126  | total loss: 0.60475 | time: 5.336s
+| Adam | epoch: 001 | loss: 0.60475 - acc: 0.7059 -- iter: 08064/11959
+Training Step: 127  | total loss: 0.60943 | time: 5.379s
+| Adam | epoch: 001 | loss: 0.60943 - acc: 0.7009 -- iter: 08128/11959
+Training Step: 128  | total loss: 0.60911 | time: 5.425s
+| Adam | epoch: 001 | loss: 0.60911 - acc: 0.6996 -- iter: 08192/11959
+Training Step: 129  | total loss: 0.61243 | time: 5.465s
+| Adam | epoch: 001 | loss: 0.61243 - acc: 0.6952 -- iter: 08256/11959
+Training Step: 130  | total loss: 0.61553 | time: 5.503s
+| Adam | epoch: 001 | loss: 0.61553 - acc: 0.6913 -- iter: 08320/11959
+Training Step: 131  | total loss: 0.61169 | time: 5.541s
+| Adam | epoch: 001 | loss: 0.61169 - acc: 0.6972 -- iter: 08384/11959
+Training Step: 132  | total loss: 0.61257 | time: 5.584s
+| Adam | epoch: 001 | loss: 0.61257 - acc: 0.6962 -- iter: 08448/11959
+Training Step: 133  | total loss: 0.61294 | time: 5.626s
+| Adam | epoch: 001 | loss: 0.61294 - acc: 0.6954 -- iter: 08512/11959
+Training Step: 134  | total loss: 0.60856 | time: 5.668s
+| Adam | epoch: 001 | loss: 0.60856 - acc: 0.7040 -- iter: 08576/11959
+Training Step: 135  | total loss: 0.60520 | time: 5.708s
+| Adam | epoch: 001 | loss: 0.60520 - acc: 0.7101 -- iter: 08640/11959
+Training Step: 136  | total loss: 0.60086 | time: 5.747s
+| Adam | epoch: 001 | loss: 0.60086 - acc: 0.7141 -- iter: 08704/11959
+Training Step: 137  | total loss: 0.59886 | time: 5.788s
+| Adam | epoch: 001 | loss: 0.59886 - acc: 0.7146 -- iter: 08768/11959
+Training Step: 138  | total loss: 0.60029 | time: 5.831s
+| Adam | epoch: 001 | loss: 0.60029 - acc: 0.7119 -- iter: 08832/11959
+Training Step: 139  | total loss: 0.60120 | time: 5.874s
+| Adam | epoch: 001 | loss: 0.60120 - acc: 0.7094 -- iter: 08896/11959
+Training Step: 140  | total loss: 0.60654 | time: 5.913s
+| Adam | epoch: 001 | loss: 0.60654 - acc: 0.7041 -- iter: 08960/11959
+Training Step: 141  | total loss: 0.60126 | time: 5.951s
+| Adam | epoch: 001 | loss: 0.60126 - acc: 0.7087 -- iter: 09024/11959
+Training Step: 142  | total loss: 0.59559 | time: 5.991s
+| Adam | epoch: 001 | loss: 0.59559 - acc: 0.7128 -- iter: 09088/11959
+Training Step: 143  | total loss: 0.60132 | time: 6.033s
+| Adam | epoch: 001 | loss: 0.60132 - acc: 0.7072 -- iter: 09152/11959
+Training Step: 144  | total loss: 0.60473 | time: 6.077s
+| Adam | epoch: 001 | loss: 0.60473 - acc: 0.7021 -- iter: 09216/11959
+Training Step: 145  | total loss: 0.59831 | time: 6.130s
+| Adam | epoch: 001 | loss: 0.59831 - acc: 0.7084 -- iter: 09280/11959
+Training Step: 146  | total loss: 0.60409 | time: 6.169s
+| Adam | epoch: 001 | loss: 0.60409 - acc: 0.7017 -- iter: 09344/11959
+Training Step: 147  | total loss: 0.61504 | time: 6.212s
+| Adam | epoch: 001 | loss: 0.61504 - acc: 0.6877 -- iter: 09408/11959
+Training Step: 148  | total loss: 0.61115 | time: 6.254s
+| Adam | epoch: 001 | loss: 0.61115 - acc: 0.6924 -- iter: 09472/11959
+Training Step: 149  | total loss: 0.60690 | time: 6.297s
+| Adam | epoch: 001 | loss: 0.60690 - acc: 0.6982 -- iter: 09536/11959
+Training Step: 150  | total loss: 0.60184 | time: 6.337s
+| Adam | epoch: 001 | loss: 0.60184 - acc: 0.7080 -- iter: 09600/11959
+Training Step: 151  | total loss: 0.59882 | time: 6.375s
+| Adam | epoch: 001 | loss: 0.59882 - acc: 0.7138 -- iter: 09664/11959
+Training Step: 152  | total loss: 0.59448 | time: 6.417s
+| Adam | epoch: 001 | loss: 0.59448 - acc: 0.7190 -- iter: 09728/11959
+Training Step: 153  | total loss: 0.58770 | time: 6.462s
+| Adam | epoch: 001 | loss: 0.58770 - acc: 0.7268 -- iter: 09792/11959
+Training Step: 154  | total loss: 0.59518 | time: 6.508s
+| Adam | epoch: 001 | loss: 0.59518 - acc: 0.7166 -- iter: 09856/11959
+Training Step: 155  | total loss: 0.59372 | time: 6.547s
+| Adam | epoch: 001 | loss: 0.59372 - acc: 0.7152 -- iter: 09920/11959
+Training Step: 156  | total loss: 0.58765 | time: 6.586s
+| Adam | epoch: 001 | loss: 0.58765 - acc: 0.7203 -- iter: 09984/11959
+Training Step: 157  | total loss: 0.59641 | time: 6.626s
+| Adam | epoch: 001 | loss: 0.59641 - acc: 0.7139 -- iter: 10048/11959
+Training Step: 158  | total loss: 0.59970 | time: 6.670s
+| Adam | epoch: 001 | loss: 0.59970 - acc: 0.7112 -- iter: 10112/11959
+Training Step: 159  | total loss: 0.59214 | time: 6.714s
+| Adam | epoch: 001 | loss: 0.59214 - acc: 0.7167 -- iter: 10176/11959
+Training Step: 160  | total loss: 0.58667 | time: 6.761s
+| Adam | epoch: 001 | loss: 0.58667 - acc: 0.7200 -- iter: 10240/11959
+Training Step: 161  | total loss: 0.57623 | time: 6.802s
+| Adam | epoch: 001 | loss: 0.57623 - acc: 0.7293 -- iter: 10304/11959
+Training Step: 162  | total loss: 0.57707 | time: 6.842s
+| Adam | epoch: 001 | loss: 0.57707 - acc: 0.7266 -- iter: 10368/11959
+Training Step: 163  | total loss: 0.58189 | time: 6.885s
+| Adam | epoch: 001 | loss: 0.58189 - acc: 0.7227 -- iter: 10432/11959
+Training Step: 164  | total loss: 0.58341 | time: 6.934s
+| Adam | epoch: 001 | loss: 0.58341 - acc: 0.7223 -- iter: 10496/11959
+Training Step: 165  | total loss: 0.58800 | time: 6.973s
+| Adam | epoch: 001 | loss: 0.58800 - acc: 0.7157 -- iter: 10560/11959
+Training Step: 166  | total loss: 0.58833 | time: 7.013s
+| Adam | epoch: 001 | loss: 0.58833 - acc: 0.7129 -- iter: 10624/11959
+Training Step: 167  | total loss: 0.59193 | time: 7.052s
+| Adam | epoch: 001 | loss: 0.59193 - acc: 0.7072 -- iter: 10688/11959
+Training Step: 168  | total loss: 0.58695 | time: 7.093s
+| Adam | epoch: 001 | loss: 0.58695 - acc: 0.7131 -- iter: 10752/11959
+Training Step: 169  | total loss: 0.57976 | time: 7.138s
+| Adam | epoch: 001 | loss: 0.57976 - acc: 0.7215 -- iter: 10816/11959
+Training Step: 170  | total loss: 0.58108 | time: 7.180s
+| Adam | epoch: 001 | loss: 0.58108 - acc: 0.7196 -- iter: 10880/11959
+Training Step: 171  | total loss: 0.58489 | time: 7.222s
+| Adam | epoch: 001 | loss: 0.58489 - acc: 0.7133 -- iter: 10944/11959
+Training Step: 172  | total loss: 0.58531 | time: 7.263s
+| Adam | epoch: 001 | loss: 0.58531 - acc: 0.7107 -- iter: 11008/11959
+Training Step: 173  | total loss: 0.57867 | time: 7.305s
+| Adam | epoch: 001 | loss: 0.57867 - acc: 0.7178 -- iter: 11072/11959
+Training Step: 174  | total loss: 0.58520 | time: 7.351s
+| Adam | epoch: 001 | loss: 0.58520 - acc: 0.7132 -- iter: 11136/11959
+Training Step: 175  | total loss: 0.58551 | time: 7.398s
+| Adam | epoch: 001 | loss: 0.58551 - acc: 0.7122 -- iter: 11200/11959
+Training Step: 176  | total loss: 0.58709 | time: 7.444s
+| Adam | epoch: 001 | loss: 0.58709 - acc: 0.7097 -- iter: 11264/11959
+Training Step: 177  | total loss: 0.58947 | time: 7.485s
+| Adam | epoch: 001 | loss: 0.58947 - acc: 0.7059 -- iter: 11328/11959
+Training Step: 178  | total loss: 0.58351 | time: 7.532s
+| Adam | epoch: 001 | loss: 0.58351 - acc: 0.7103 -- iter: 11392/11959
+Training Step: 179  | total loss: 0.58257 | time: 7.575s
+| Adam | epoch: 001 | loss: 0.58257 - acc: 0.7112 -- iter: 11456/11959
+Training Step: 180  | total loss: 0.57592 | time: 7.614s
+| Adam | epoch: 001 | loss: 0.57592 - acc: 0.7182 -- iter: 11520/11959
+Training Step: 181  | total loss: 0.57596 | time: 7.652s
+| Adam | epoch: 001 | loss: 0.57596 - acc: 0.7182 -- iter: 11584/11959
+Training Step: 182  | total loss: 0.57916 | time: 7.692s
+| Adam | epoch: 001 | loss: 0.57916 - acc: 0.7167 -- iter: 11648/11959
+Training Step: 183  | total loss: 0.58075 | time: 7.738s
+| Adam | epoch: 001 | loss: 0.58075 - acc: 0.7154 -- iter: 11712/11959
+Training Step: 184  | total loss: 0.58510 | time: 7.782s
+| Adam | epoch: 001 | loss: 0.58510 - acc: 0.7079 -- iter: 11776/11959
+Training Step: 185  | total loss: 0.57826 | time: 7.823s
+| Adam | epoch: 001 | loss: 0.57826 - acc: 0.7121 -- iter: 11840/11959
+Training Step: 186  | total loss: 0.58006 | time: 7.863s
+| Adam | epoch: 001 | loss: 0.58006 - acc: 0.7112 -- iter: 11904/11959
+Training Step: 187  | total loss: 0.57651 | time: 8.931s
+| Adam | epoch: 001 | loss: 0.57651 - acc: 0.7151 | val_loss: 0.55507 - val_acc: 0.7350 -- iter: 11959/11959
+--
+Training Step: 188  | total loss: 0.58093 | time: 0.034s
+| Adam | epoch: 002 | loss: 0.58093 - acc: 0.7127 -- iter: 00064/11959
+Training Step: 189  | total loss: 0.58397 | time: 0.072s
+| Adam | epoch: 002 | loss: 0.58397 - acc: 0.7105 -- iter: 00128/11959
+Training Step: 190  | total loss: 0.57916 | time: 0.112s
+| Adam | epoch: 002 | loss: 0.57916 - acc: 0.7160 -- iter: 00192/11959
+Training Step: 191  | total loss: 0.58851 | time: 0.151s
+| Adam | epoch: 002 | loss: 0.58851 - acc: 0.7038 -- iter: 00256/11959
+Training Step: 192  | total loss: 0.58895 | time: 0.188s
+| Adam | epoch: 002 | loss: 0.58895 - acc: 0.7022 -- iter: 00320/11959
+Training Step: 193  | total loss: 0.58576 | time: 0.228s
+| Adam | epoch: 002 | loss: 0.58576 - acc: 0.7038 -- iter: 00384/11959
+Training Step: 194  | total loss: 0.58227 | time: 0.269s
+| Adam | epoch: 002 | loss: 0.58227 - acc: 0.7053 -- iter: 00448/11959
+Training Step: 195  | total loss: 0.58561 | time: 0.308s
+| Adam | epoch: 002 | loss: 0.58561 - acc: 0.7051 -- iter: 00512/11959
+Training Step: 196  | total loss: 0.58358 | time: 0.346s
+| Adam | epoch: 002 | loss: 0.58358 - acc: 0.7033 -- iter: 00576/11959
+Training Step: 197  | total loss: 0.57553 | time: 0.385s
+| Adam | epoch: 002 | loss: 0.57553 - acc: 0.7111 -- iter: 00640/11959
+Training Step: 198  | total loss: 0.57038 | time: 0.423s
+| Adam | epoch: 002 | loss: 0.57038 - acc: 0.7166 -- iter: 00704/11959
+Training Step: 199  | total loss: 0.58755 | time: 0.463s
+| Adam | epoch: 002 | loss: 0.58755 - acc: 0.7105 -- iter: 00768/11959
+Training Step: 200  | total loss: 0.58430 | time: 0.503s
+| Adam | epoch: 002 | loss: 0.58430 - acc: 0.7129 -- iter: 00832/11959
+Training Step: 201  | total loss: 0.58144 | time: 0.544s
+| Adam | epoch: 002 | loss: 0.58144 - acc: 0.7135 -- iter: 00896/11959
+Training Step: 202  | total loss: 0.58339 | time: 0.583s
+| Adam | epoch: 002 | loss: 0.58339 - acc: 0.7125 -- iter: 00960/11959
+Training Step: 203  | total loss: 0.58381 | time: 0.621s
+| Adam | epoch: 002 | loss: 0.58381 - acc: 0.7115 -- iter: 01024/11959
+Training Step: 204  | total loss: 0.58834 | time: 0.659s
+| Adam | epoch: 002 | loss: 0.58834 - acc: 0.7013 -- iter: 01088/11959
+Training Step: 205  | total loss: 0.58898 | time: 0.700s
+| Adam | epoch: 002 | loss: 0.58898 - acc: 0.7015 -- iter: 01152/11959
+Training Step: 206  | total loss: 0.58677 | time: 0.739s
+| Adam | epoch: 002 | loss: 0.58677 - acc: 0.7048 -- iter: 01216/11959
+Training Step: 207  | total loss: 0.58328 | time: 0.782s
+| Adam | epoch: 002 | loss: 0.58328 - acc: 0.7077 -- iter: 01280/11959
+Training Step: 208  | total loss: 0.58704 | time: 0.820s
+| Adam | epoch: 002 | loss: 0.58704 - acc: 0.7042 -- iter: 01344/11959
+Training Step: 209  | total loss: 0.57946 | time: 0.860s
+| Adam | epoch: 002 | loss: 0.57946 - acc: 0.7103 -- iter: 01408/11959
+Training Step: 210  | total loss: 0.58087 | time: 0.901s
+| Adam | epoch: 002 | loss: 0.58087 - acc: 0.7080 -- iter: 01472/11959
+Training Step: 211  | total loss: 0.59422 | time: 0.956s
+| Adam | epoch: 002 | loss: 0.59422 - acc: 0.6982 -- iter: 01536/11959
+Training Step: 212  | total loss: 0.59068 | time: 0.997s
+| Adam | epoch: 002 | loss: 0.59068 - acc: 0.7018 -- iter: 01600/11959
+Training Step: 213  | total loss: 0.59005 | time: 1.034s
+| Adam | epoch: 002 | loss: 0.59005 - acc: 0.7019 -- iter: 01664/11959
+Training Step: 214  | total loss: 0.59577 | time: 1.072s
+| Adam | epoch: 002 | loss: 0.59577 - acc: 0.6911 -- iter: 01728/11959
+Training Step: 215  | total loss: 0.58634 | time: 1.111s
+| Adam | epoch: 002 | loss: 0.58634 - acc: 0.7032 -- iter: 01792/11959
+Training Step: 216  | total loss: 0.58117 | time: 1.153s
+| Adam | epoch: 002 | loss: 0.58117 - acc: 0.7079 -- iter: 01856/11959
+Training Step: 217  | total loss: 0.58361 | time: 1.194s
+| Adam | epoch: 002 | loss: 0.58361 - acc: 0.7043 -- iter: 01920/11959
+Training Step: 218  | total loss: 0.58420 | time: 1.233s
+| Adam | epoch: 002 | loss: 0.58420 - acc: 0.7011 -- iter: 01984/11959
+Training Step: 219  | total loss: 0.57752 | time: 1.271s
+| Adam | epoch: 002 | loss: 0.57752 - acc: 0.7060 -- iter: 02048/11959
+Training Step: 220  | total loss: 0.57428 | time: 1.316s
+| Adam | epoch: 002 | loss: 0.57428 - acc: 0.7057 -- iter: 02112/11959
+Training Step: 221  | total loss: 0.57661 | time: 1.358s
+| Adam | epoch: 002 | loss: 0.57661 - acc: 0.7085 -- iter: 02176/11959
+Training Step: 222  | total loss: 0.57699 | time: 1.401s
+| Adam | epoch: 002 | loss: 0.57699 - acc: 0.7064 -- iter: 02240/11959
+Training Step: 223  | total loss: 0.57202 | time: 1.444s
+| Adam | epoch: 002 | loss: 0.57202 - acc: 0.7124 -- iter: 02304/11959
+Training Step: 224  | total loss: 0.57072 | time: 1.483s
+| Adam | epoch: 002 | loss: 0.57072 - acc: 0.7146 -- iter: 02368/11959
+Training Step: 225  | total loss: 0.57626 | time: 1.522s
+| Adam | epoch: 002 | loss: 0.57626 - acc: 0.7103 -- iter: 02432/11959
+Training Step: 226  | total loss: 0.57841 | time: 1.566s
+| Adam | epoch: 002 | loss: 0.57841 - acc: 0.7096 -- iter: 02496/11959
+Training Step: 227  | total loss: 0.57310 | time: 1.609s
+| Adam | epoch: 002 | loss: 0.57310 - acc: 0.7136 -- iter: 02560/11959
+Training Step: 228  | total loss: 0.56875 | time: 1.651s
+| Adam | epoch: 002 | loss: 0.56875 - acc: 0.7157 -- iter: 02624/11959
+Training Step: 229  | total loss: 0.56999 | time: 1.694s
+| Adam | epoch: 002 | loss: 0.56999 - acc: 0.7113 -- iter: 02688/11959
+Training Step: 230  | total loss: 0.57134 | time: 1.734s
+| Adam | epoch: 002 | loss: 0.57134 - acc: 0.7058 -- iter: 02752/11959
+Training Step: 231  | total loss: 0.56917 | time: 1.777s
+| Adam | epoch: 002 | loss: 0.56917 - acc: 0.7055 -- iter: 02816/11959
+Training Step: 232  | total loss: 0.57052 | time: 1.821s
+| Adam | epoch: 002 | loss: 0.57052 - acc: 0.7084 -- iter: 02880/11959
+Training Step: 233  | total loss: 0.56831 | time: 1.860s
+| Adam | epoch: 002 | loss: 0.56831 - acc: 0.7110 -- iter: 02944/11959
+Training Step: 234  | total loss: 0.57992 | time: 1.899s
+| Adam | epoch: 002 | loss: 0.57992 - acc: 0.7040 -- iter: 03008/11959
+Training Step: 235  | total loss: 0.57195 | time: 1.938s
+| Adam | epoch: 002 | loss: 0.57195 - acc: 0.7055 -- iter: 03072/11959
+Training Step: 236  | total loss: 0.57900 | time: 1.982s
+| Adam | epoch: 002 | loss: 0.57900 - acc: 0.7021 -- iter: 03136/11959
+Training Step: 237  | total loss: 0.58521 | time: 2.024s
+| Adam | epoch: 002 | loss: 0.58521 - acc: 0.7022 -- iter: 03200/11959
+Training Step: 238  | total loss: 0.57969 | time: 2.064s
+| Adam | epoch: 002 | loss: 0.57969 - acc: 0.6992 -- iter: 03264/11959
+Training Step: 239  | total loss: 0.57988 | time: 2.103s
+| Adam | epoch: 002 | loss: 0.57988 - acc: 0.6933 -- iter: 03328/11959
+Training Step: 240  | total loss: 0.58866 | time: 2.141s
+| Adam | epoch: 002 | loss: 0.58866 - acc: 0.6849 -- iter: 03392/11959
+Training Step: 241  | total loss: 0.58709 | time: 2.183s
+| Adam | epoch: 002 | loss: 0.58709 - acc: 0.6883 -- iter: 03456/11959
+Training Step: 242  | total loss: 0.58255 | time: 2.224s
+| Adam | epoch: 002 | loss: 0.58255 - acc: 0.6898 -- iter: 03520/11959
+Training Step: 243  | total loss: 0.57790 | time: 2.265s
+| Adam | epoch: 002 | loss: 0.57790 - acc: 0.6911 -- iter: 03584/11959
+Training Step: 244  | total loss: 0.57240 | time: 2.304s
+| Adam | epoch: 002 | loss: 0.57240 - acc: 0.6970 -- iter: 03648/11959
+Training Step: 245  | total loss: 0.56940 | time: 2.342s
+| Adam | epoch: 002 | loss: 0.56940 - acc: 0.6992 -- iter: 03712/11959
+Training Step: 246  | total loss: 0.56435 | time: 2.380s
+| Adam | epoch: 002 | loss: 0.56435 - acc: 0.7058 -- iter: 03776/11959
+Training Step: 247  | total loss: 0.57429 | time: 2.423s
+| Adam | epoch: 002 | loss: 0.57429 - acc: 0.6993 -- iter: 03840/11959
+Training Step: 248  | total loss: 0.57329 | time: 2.466s
+| Adam | epoch: 002 | loss: 0.57329 - acc: 0.6966 -- iter: 03904/11959
+Training Step: 249  | total loss: 0.57698 | time: 2.511s
+| Adam | epoch: 002 | loss: 0.57698 - acc: 0.6925 -- iter: 03968/11959
+Training Step: 250  | total loss: 0.57139 | time: 2.553s
+| Adam | epoch: 002 | loss: 0.57139 - acc: 0.7061 -- iter: 04032/11959
+Training Step: 251  | total loss: 0.56377 | time: 2.598s
+| Adam | epoch: 002 | loss: 0.56377 - acc: 0.7120 -- iter: 04096/11959
+Training Step: 252  | total loss: 0.56288 | time: 2.652s
+| Adam | epoch: 002 | loss: 0.56288 - acc: 0.7158 -- iter: 04160/11959
+Training Step: 253  | total loss: 0.54913 | time: 2.701s
+| Adam | epoch: 002 | loss: 0.54913 - acc: 0.7271 -- iter: 04224/11959
+Training Step: 254  | total loss: 0.55584 | time: 2.743s
+| Adam | epoch: 002 | loss: 0.55584 - acc: 0.7262 -- iter: 04288/11959
+Training Step: 255  | total loss: 0.56935 | time: 2.782s
+| Adam | epoch: 002 | loss: 0.56935 - acc: 0.7208 -- iter: 04352/11959
+Training Step: 256  | total loss: 0.55756 | time: 2.820s
+| Adam | epoch: 002 | loss: 0.55756 - acc: 0.7268 -- iter: 04416/11959
+Training Step: 257  | total loss: 0.55128 | time: 2.861s
+| Adam | epoch: 002 | loss: 0.55128 - acc: 0.7338 -- iter: 04480/11959
+Training Step: 258  | total loss: 0.54446 | time: 2.902s
+| Adam | epoch: 002 | loss: 0.54446 - acc: 0.7417 -- iter: 04544/11959
+Training Step: 259  | total loss: 0.54077 | time: 2.944s
+| Adam | epoch: 002 | loss: 0.54077 - acc: 0.7425 -- iter: 04608/11959
+Training Step: 260  | total loss: 0.54025 | time: 2.983s
+| Adam | epoch: 002 | loss: 0.54025 - acc: 0.7417 -- iter: 04672/11959
+Training Step: 261  | total loss: 0.53792 | time: 3.024s
+| Adam | epoch: 002 | loss: 0.53792 - acc: 0.7426 -- iter: 04736/11959
+Training Step: 262  | total loss: 0.56279 | time: 3.062s
+| Adam | epoch: 002 | loss: 0.56279 - acc: 0.7230 -- iter: 04800/11959
+Training Step: 263  | total loss: 0.57286 | time: 3.104s
+| Adam | epoch: 002 | loss: 0.57286 - acc: 0.7101 -- iter: 04864/11959
+Training Step: 264  | total loss: 0.57538 | time: 3.147s
+| Adam | epoch: 002 | loss: 0.57538 - acc: 0.7047 -- iter: 04928/11959
+Training Step: 265  | total loss: 0.57989 | time: 3.188s
+| Adam | epoch: 002 | loss: 0.57989 - acc: 0.6998 -- iter: 04992/11959
+Training Step: 266  | total loss: 0.57866 | time: 3.226s
+| Adam | epoch: 002 | loss: 0.57866 - acc: 0.7080 -- iter: 05056/11959
+Training Step: 267  | total loss: 0.57940 | time: 3.264s
+| Adam | epoch: 002 | loss: 0.57940 - acc: 0.7106 -- iter: 05120/11959
+Training Step: 268  | total loss: 0.58464 | time: 3.305s
+| Adam | epoch: 002 | loss: 0.58464 - acc: 0.7067 -- iter: 05184/11959
+Training Step: 269  | total loss: 0.58142 | time: 3.349s
+| Adam | epoch: 002 | loss: 0.58142 - acc: 0.7142 -- iter: 05248/11959
+Training Step: 270  | total loss: 0.58269 | time: 3.389s
+| Adam | epoch: 002 | loss: 0.58269 - acc: 0.7115 -- iter: 05312/11959
+Training Step: 271  | total loss: 0.58147 | time: 3.429s
+| Adam | epoch: 002 | loss: 0.58147 - acc: 0.7138 -- iter: 05376/11959
+Training Step: 272  | total loss: 0.57731 | time: 3.468s
+| Adam | epoch: 002 | loss: 0.57731 - acc: 0.7143 -- iter: 05440/11959
+Training Step: 273  | total loss: 0.55952 | time: 3.513s
+| Adam | epoch: 002 | loss: 0.55952 - acc: 0.7304 -- iter: 05504/11959
+Training Step: 274  | total loss: 0.56240 | time: 3.558s
+| Adam | epoch: 002 | loss: 0.56240 - acc: 0.7292 -- iter: 05568/11959
+Training Step: 275  | total loss: 0.57086 | time: 3.603s
+| Adam | epoch: 002 | loss: 0.57086 - acc: 0.7235 -- iter: 05632/11959
+Training Step: 276  | total loss: 0.56226 | time: 3.643s
+| Adam | epoch: 002 | loss: 0.56226 - acc: 0.7261 -- iter: 05696/11959
+Training Step: 277  | total loss: 0.57348 | time: 3.688s
+| Adam | epoch: 002 | loss: 0.57348 - acc: 0.7191 -- iter: 05760/11959
+Training Step: 278  | total loss: 0.56682 | time: 3.731s
+| Adam | epoch: 002 | loss: 0.56682 - acc: 0.7222 -- iter: 05824/11959
+Training Step: 279  | total loss: 0.58075 | time: 3.773s
+| Adam | epoch: 002 | loss: 0.58075 - acc: 0.7047 -- iter: 05888/11959
+Training Step: 280  | total loss: 0.57776 | time: 3.814s
+| Adam | epoch: 002 | loss: 0.57776 - acc: 0.7045 -- iter: 05952/11959
+Training Step: 281  | total loss: 0.57720 | time: 3.854s
+| Adam | epoch: 002 | loss: 0.57720 - acc: 0.7060 -- iter: 06016/11959
+Training Step: 282  | total loss: 0.57871 | time: 3.891s
+| Adam | epoch: 002 | loss: 0.57871 - acc: 0.7025 -- iter: 06080/11959
+Training Step: 283  | total loss: 0.57858 | time: 3.929s
+| Adam | epoch: 002 | loss: 0.57858 - acc: 0.7026 -- iter: 06144/11959
+Training Step: 284  | total loss: 0.57696 | time: 3.972s
+| Adam | epoch: 002 | loss: 0.57696 - acc: 0.7105 -- iter: 06208/11959
+Training Step: 285  | total loss: 0.57859 | time: 4.017s
+| Adam | epoch: 002 | loss: 0.57859 - acc: 0.7113 -- iter: 06272/11959
+Training Step: 286  | total loss: 0.57996 | time: 4.059s
+| Adam | epoch: 002 | loss: 0.57996 - acc: 0.7042 -- iter: 06336/11959
+Training Step: 287  | total loss: 0.57757 | time: 4.099s
+| Adam | epoch: 002 | loss: 0.57757 - acc: 0.7057 -- iter: 06400/11959
+Training Step: 288  | total loss: 0.56664 | time: 4.137s
+| Adam | epoch: 002 | loss: 0.56664 - acc: 0.7117 -- iter: 06464/11959
+Training Step: 289  | total loss: 0.56264 | time: 4.175s
+| Adam | epoch: 002 | loss: 0.56264 - acc: 0.7139 -- iter: 06528/11959
+Training Step: 290  | total loss: 0.56684 | time: 4.219s
+| Adam | epoch: 002 | loss: 0.56684 - acc: 0.7097 -- iter: 06592/11959
+Training Step: 291  | total loss: 0.56667 | time: 4.259s
+| Adam | epoch: 002 | loss: 0.56667 - acc: 0.7122 -- iter: 06656/11959
+Training Step: 292  | total loss: 0.56603 | time: 4.302s
+| Adam | epoch: 002 | loss: 0.56603 - acc: 0.7129 -- iter: 06720/11959
+Training Step: 293  | total loss: 0.56580 | time: 4.340s
+| Adam | epoch: 002 | loss: 0.56580 - acc: 0.7119 -- iter: 06784/11959
+Training Step: 294  | total loss: 0.56522 | time: 4.380s
+| Adam | epoch: 002 | loss: 0.56522 - acc: 0.7110 -- iter: 06848/11959
+Training Step: 295  | total loss: 0.56473 | time: 4.419s
+| Adam | epoch: 002 | loss: 0.56473 - acc: 0.7118 -- iter: 06912/11959
+Training Step: 296  | total loss: 0.56968 | time: 4.460s
+| Adam | epoch: 002 | loss: 0.56968 - acc: 0.7078 -- iter: 06976/11959
+Training Step: 297  | total loss: 0.56692 | time: 4.505s
+| Adam | epoch: 002 | loss: 0.56692 - acc: 0.7136 -- iter: 07040/11959
+Training Step: 298  | total loss: 0.57161 | time: 4.546s
+| Adam | epoch: 002 | loss: 0.57161 - acc: 0.7094 -- iter: 07104/11959
+Training Step: 299  | total loss: 0.56920 | time: 4.584s
+| Adam | epoch: 002 | loss: 0.56920 - acc: 0.7182 -- iter: 07168/11959
+Training Step: 300  | total loss: 0.56868 | time: 4.624s
+| Adam | epoch: 002 | loss: 0.56868 - acc: 0.7198 -- iter: 07232/11959
+Training Step: 301  | total loss: 0.56504 | time: 4.670s
+| Adam | epoch: 002 | loss: 0.56504 - acc: 0.7244 -- iter: 07296/11959
+Training Step: 302  | total loss: 0.56065 | time: 4.711s
+| Adam | epoch: 002 | loss: 0.56065 - acc: 0.7222 -- iter: 07360/11959
+Training Step: 303  | total loss: 0.54142 | time: 4.753s
+| Adam | epoch: 002 | loss: 0.54142 - acc: 0.7360 -- iter: 07424/11959
+Training Step: 304  | total loss: 0.53937 | time: 4.791s
+| Adam | epoch: 002 | loss: 0.53937 - acc: 0.7420 -- iter: 07488/11959
+Training Step: 305  | total loss: 0.55329 | time: 4.828s
+| Adam | epoch: 002 | loss: 0.55329 - acc: 0.7382 -- iter: 07552/11959
+Training Step: 306  | total loss: 0.53697 | time: 4.870s
+| Adam | epoch: 002 | loss: 0.53697 - acc: 0.7471 -- iter: 07616/11959
+Training Step: 307  | total loss: 0.53332 | time: 4.912s
+| Adam | epoch: 002 | loss: 0.53332 - acc: 0.7474 -- iter: 07680/11959
+Training Step: 308  | total loss: 0.53892 | time: 4.953s
+| Adam | epoch: 002 | loss: 0.53892 - acc: 0.7414 -- iter: 07744/11959
+Training Step: 309  | total loss: 0.53941 | time: 4.991s
+| Adam | epoch: 002 | loss: 0.53941 - acc: 0.7423 -- iter: 07808/11959
+Training Step: 310  | total loss: 0.54215 | time: 5.030s
+| Adam | epoch: 002 | loss: 0.54215 - acc: 0.7399 -- iter: 07872/11959
+Training Step: 311  | total loss: 0.54043 | time: 5.075s
+| Adam | epoch: 002 | loss: 0.54043 - acc: 0.7347 -- iter: 07936/11959
+Training Step: 312  | total loss: 0.54603 | time: 5.119s
+| Adam | epoch: 002 | loss: 0.54603 - acc: 0.7253 -- iter: 08000/11959
+Training Step: 313  | total loss: 0.54959 | time: 5.159s
+| Adam | epoch: 002 | loss: 0.54959 - acc: 0.7215 -- iter: 08064/11959
+Training Step: 314  | total loss: 0.54768 | time: 5.197s
+| Adam | epoch: 002 | loss: 0.54768 - acc: 0.7259 -- iter: 08128/11959
+Training Step: 315  | total loss: 0.54658 | time: 5.235s
+| Adam | epoch: 002 | loss: 0.54658 - acc: 0.7283 -- iter: 08192/11959
+Training Step: 316  | total loss: 0.54264 | time: 5.275s
+| Adam | epoch: 002 | loss: 0.54264 - acc: 0.7305 -- iter: 08256/11959
+Training Step: 317  | total loss: 0.54046 | time: 5.317s
+| Adam | epoch: 002 | loss: 0.54046 - acc: 0.7324 -- iter: 08320/11959
+Training Step: 318  | total loss: 0.55473 | time: 5.365s
+| Adam | epoch: 002 | loss: 0.55473 - acc: 0.7280 -- iter: 08384/11959
+Training Step: 319  | total loss: 0.53909 | time: 5.425s
+| Adam | epoch: 002 | loss: 0.53909 - acc: 0.7395 -- iter: 08448/11959
+Training Step: 320  | total loss: 0.53370 | time: 5.484s
+| Adam | epoch: 002 | loss: 0.53370 - acc: 0.7390 -- iter: 08512/11959
+Training Step: 321  | total loss: 0.53905 | time: 5.549s
+| Adam | epoch: 002 | loss: 0.53905 - acc: 0.7292 -- iter: 08576/11959
+Training Step: 322  | total loss: 0.53142 | time: 5.613s
+| Adam | epoch: 002 | loss: 0.53142 - acc: 0.7344 -- iter: 08640/11959
+Training Step: 323  | total loss: 0.53063 | time: 5.660s
+| Adam | epoch: 002 | loss: 0.53063 - acc: 0.7344 -- iter: 08704/11959
+Training Step: 324  | total loss: 0.53737 | time: 5.701s
+| Adam | epoch: 002 | loss: 0.53737 - acc: 0.7359 -- iter: 08768/11959
+Training Step: 325  | total loss: 0.53466 | time: 5.738s
+| Adam | epoch: 002 | loss: 0.53466 - acc: 0.7389 -- iter: 08832/11959
+Training Step: 326  | total loss: 0.53479 | time: 5.798s
+| Adam | epoch: 002 | loss: 0.53479 - acc: 0.7400 -- iter: 08896/11959
+Training Step: 327  | total loss: 0.53623 | time: 5.840s
+| Adam | epoch: 002 | loss: 0.53623 - acc: 0.7363 -- iter: 08960/11959
+Training Step: 328  | total loss: 0.53002 | time: 5.881s
+| Adam | epoch: 002 | loss: 0.53002 - acc: 0.7346 -- iter: 09024/11959
+Training Step: 329  | total loss: 0.53826 | time: 5.922s
+| Adam | epoch: 002 | loss: 0.53826 - acc: 0.7283 -- iter: 09088/11959
+Training Step: 330  | total loss: 0.53608 | time: 5.969s
+| Adam | epoch: 002 | loss: 0.53608 - acc: 0.7320 -- iter: 09152/11959
+Training Step: 331  | total loss: 0.54359 | time: 6.025s
+| Adam | epoch: 002 | loss: 0.54359 - acc: 0.7245 -- iter: 09216/11959
+Training Step: 332  | total loss: 0.54502 | time: 6.073s
+| Adam | epoch: 002 | loss: 0.54502 - acc: 0.7254 -- iter: 09280/11959
+Training Step: 333  | total loss: 0.54712 | time: 6.117s
+| Adam | epoch: 002 | loss: 0.54712 - acc: 0.7217 -- iter: 09344/11959
+Training Step: 334  | total loss: 0.54836 | time: 6.160s
+| Adam | epoch: 002 | loss: 0.54836 - acc: 0.7151 -- iter: 09408/11959
+Training Step: 335  | total loss: 0.55016 | time: 6.209s
+| Adam | epoch: 002 | loss: 0.55016 - acc: 0.7155 -- iter: 09472/11959
+Training Step: 336  | total loss: 0.56415 | time: 6.257s
+| Adam | epoch: 002 | loss: 0.56415 - acc: 0.7017 -- iter: 09536/11959
+Training Step: 337  | total loss: 0.56463 | time: 6.300s
+| Adam | epoch: 002 | loss: 0.56463 - acc: 0.7034 -- iter: 09600/11959
+Training Step: 338  | total loss: 0.55850 | time: 6.340s
+| Adam | epoch: 002 | loss: 0.55850 - acc: 0.7112 -- iter: 09664/11959
+Training Step: 339  | total loss: 0.56148 | time: 6.379s
+| Adam | epoch: 002 | loss: 0.56148 - acc: 0.7151 -- iter: 09728/11959
+Training Step: 340  | total loss: 0.56374 | time: 6.422s
+| Adam | epoch: 002 | loss: 0.56374 - acc: 0.7123 -- iter: 09792/11959
+Training Step: 341  | total loss: 0.56596 | time: 6.481s
+| Adam | epoch: 002 | loss: 0.56596 - acc: 0.7130 -- iter: 09856/11959
+Training Step: 342  | total loss: 0.56811 | time: 6.526s
+| Adam | epoch: 002 | loss: 0.56811 - acc: 0.7089 -- iter: 09920/11959
+Training Step: 343  | total loss: 0.57300 | time: 6.568s
+| Adam | epoch: 002 | loss: 0.57300 - acc: 0.7036 -- iter: 09984/11959
+Training Step: 344  | total loss: 0.57118 | time: 6.611s
+| Adam | epoch: 002 | loss: 0.57118 - acc: 0.7098 -- iter: 10048/11959
+Training Step: 345  | total loss: 0.57222 | time: 6.649s
+| Adam | epoch: 002 | loss: 0.57222 - acc: 0.7076 -- iter: 10112/11959
+Training Step: 346  | total loss: 0.57343 | time: 6.691s
+| Adam | epoch: 002 | loss: 0.57343 - acc: 0.7040 -- iter: 10176/11959
+Training Step: 347  | total loss: 0.57564 | time: 6.734s
+| Adam | epoch: 002 | loss: 0.57564 - acc: 0.7024 -- iter: 10240/11959
+Training Step: 348  | total loss: 0.57303 | time: 6.782s
+| Adam | epoch: 002 | loss: 0.57303 - acc: 0.7040 -- iter: 10304/11959
+Training Step: 349  | total loss: 0.56467 | time: 6.835s
+| Adam | epoch: 002 | loss: 0.56467 - acc: 0.7117 -- iter: 10368/11959
+Training Step: 350  | total loss: 0.55930 | time: 6.884s
+| Adam | epoch: 002 | loss: 0.55930 - acc: 0.7171 -- iter: 10432/11959
+Training Step: 351  | total loss: 0.55656 | time: 6.928s
+| Adam | epoch: 002 | loss: 0.55656 - acc: 0.7251 -- iter: 10496/11959
+Training Step: 352  | total loss: 0.55400 | time: 6.969s
+| Adam | epoch: 002 | loss: 0.55400 - acc: 0.7323 -- iter: 10560/11959
+Training Step: 353  | total loss: 0.56257 | time: 7.012s
+| Adam | epoch: 002 | loss: 0.56257 - acc: 0.7231 -- iter: 10624/11959
+Training Step: 354  | total loss: 0.56976 | time: 7.054s
+| Adam | epoch: 002 | loss: 0.56976 - acc: 0.7117 -- iter: 10688/11959
+Training Step: 355  | total loss: 0.56592 | time: 7.104s
+| Adam | epoch: 002 | loss: 0.56592 - acc: 0.7140 -- iter: 10752/11959
+Training Step: 356  | total loss: 0.56390 | time: 7.150s
+| Adam | epoch: 002 | loss: 0.56390 - acc: 0.7223 -- iter: 10816/11959
+Training Step: 357  | total loss: 0.56270 | time: 7.195s
+| Adam | epoch: 002 | loss: 0.56270 - acc: 0.7219 -- iter: 10880/11959
+Training Step: 358  | total loss: 0.55718 | time: 7.236s
+| Adam | epoch: 002 | loss: 0.55718 - acc: 0.7310 -- iter: 10944/11959
+Training Step: 359  | total loss: 0.55491 | time: 7.280s
+| Adam | epoch: 002 | loss: 0.55491 - acc: 0.7313 -- iter: 11008/11959
+Training Step: 360  | total loss: 0.56148 | time: 7.328s
+| Adam | epoch: 002 | loss: 0.56148 - acc: 0.7238 -- iter: 11072/11959
+Training Step: 361  | total loss: 0.55923 | time: 7.372s
+| Adam | epoch: 002 | loss: 0.55923 - acc: 0.7280 -- iter: 11136/11959
+Training Step: 362  | total loss: 0.55377 | time: 7.413s
+| Adam | epoch: 002 | loss: 0.55377 - acc: 0.7318 -- iter: 11200/11959
+Training Step: 363  | total loss: 0.54730 | time: 7.453s
+| Adam | epoch: 002 | loss: 0.54730 - acc: 0.7320 -- iter: 11264/11959
+Training Step: 364  | total loss: 0.54950 | time: 7.492s
+| Adam | epoch: 002 | loss: 0.54950 - acc: 0.7276 -- iter: 11328/11959
+Training Step: 365  | total loss: 0.55466 | time: 7.538s
+| Adam | epoch: 002 | loss: 0.55466 - acc: 0.7220 -- iter: 11392/11959
+Training Step: 366  | total loss: 0.55637 | time: 7.588s
+| Adam | epoch: 002 | loss: 0.55637 - acc: 0.7123 -- iter: 11456/11959
+Training Step: 367  | total loss: 0.55280 | time: 7.632s
+| Adam | epoch: 002 | loss: 0.55280 - acc: 0.7161 -- iter: 11520/11959
+Training Step: 368  | total loss: 0.55621 | time: 7.678s
+| Adam | epoch: 002 | loss: 0.55621 - acc: 0.7132 -- iter: 11584/11959
+Training Step: 369  | total loss: 0.55240 | time: 7.723s
+| Adam | epoch: 002 | loss: 0.55240 - acc: 0.7216 -- iter: 11648/11959
+Training Step: 370  | total loss: 0.54828 | time: 7.769s
+| Adam | epoch: 002 | loss: 0.54828 - acc: 0.7260 -- iter: 11712/11959
+Training Step: 371  | total loss: 0.53445 | time: 7.812s
+| Adam | epoch: 002 | loss: 0.53445 - acc: 0.7393 -- iter: 11776/11959
+Training Step: 372  | total loss: 0.52752 | time: 7.855s
+| Adam | epoch: 002 | loss: 0.52752 - acc: 0.7435 -- iter: 11840/11959
+Training Step: 373  | total loss: 0.54774 | time: 7.894s
+| Adam | epoch: 002 | loss: 0.54774 - acc: 0.7317 -- iter: 11904/11959
+Training Step: 374  | total loss: 0.55403 | time: 8.937s
+| Adam | epoch: 002 | loss: 0.55403 - acc: 0.7319 | val_loss: 0.53172 - val_acc: 0.7440 -- iter: 11959/11959
+--
+100%|██████████| 782/782 [00:01<00:00, 609.34it/s]
+
+Process finished with exit code 0
