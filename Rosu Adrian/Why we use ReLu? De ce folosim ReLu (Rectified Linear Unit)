@@ -1,3 +1,114 @@
 Why we use ReLu? De ce folosim ReLu (Rectified Linear Unit)
 https://docs.google.com/document/d/1dPHoIURmY619jlpcDgso6xGaga_HQ-7LbGgQL51SuNw/edit?usp=sharing
 
+EN + RO
+
+EN 
+ReLU 
+-> can be used with most types of neural networks.
+-> It is recommended by default for both multilayer neural networks (MLP) and convolutional neural networks (CNN).
+
+
+Why is ReLu good? Rectified Linear Unit (ReLU)
+Https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/
+
++ Sigmoid and hyperbolic tangent activation functions cannot be used in multilayer networks due to the missing gradient problem.
++ The rectified linear activation function exceeds the disappearance gradient, allowing models to learn faster and function better.
++ Rectified linear activation (ReLu) is the default activation when developing Multilayer Perceptron and convolutional neural networks.
+
+Sigmoid activation function (also called the logistic function)
+-> The entry into function is transformed into a value between 0.0 and 1.0. Entries that are much larger than 1.0 are
+Converted to 1.0, similarly, values ​​much smaller than 0.0 are locked to 0.0. The shape of the function for all
+The possible inputs is an S shape from zero to 0.5 to 1.0.
+
+Hyperbolic tangent function (or tanh for short)
+-> It is a similar nonlinear activation function that produces values ​​between -1.0 and 1.0.
+
+Sigmoid activation function and hyperbolic tangent function (problem)
+-> A general problem with both sigmoid and tanh functions is that they saturate. This means that high values
+Are caught at 1.0 and low values ​​are caught at -1 or 0, respectively at tanh and sigmoid. Moreover, the functions are only sensitive to
+Changes around the midpoint of their entry, such as 0.5 for sigmoid and 0.0 for tanh.
+-> Finally, as hardware capacity has increased through very deep neural networks, using functions
+Sigmoid and tanh activation could not be easily instructed.
+
+Resume
+-> can be used with most types of neural networks.
+-> It is recommended by default for both multilayer neural networks (MLP) and convolutional neural networks (CNN).
+-> Try a Smaller Bias Input Value (he bias is the input on the node that has a fixed value.
+The bias has the effect of shifting the activation function and it is traditional to set the bias input value to 1.0.
+When using ReLU in your network, consider setting the bias to a small value, such as 0.1.
+… it can be a good practice to set all elements of [the bias] to a small, positive value, such as 0.1. This makes it very likely 
+that the rectified linear units will be initially active for most inputs in the training set and allow the derivatives to pass through.)
+-> Use “He Weight Initialization” (Before training a neural network,the weights of the network must be initialized to small random 
+values.When using ReLU in your network and initializing weights to small random values centered on zero, then by default half of the 
+units in the network will output a zero value.For example, after uniform initialization of the weights, around 50% of hidden units 
+continuous output values are real zeros)
+-> Scale Input Data (It is good practice to scale input data prior to using a neural network.This may involve standardizing variables 
+to have a zero mean and unit variance or normalizing each value to the scale 0-to-1.Without data scaling on many problems, the weights 
+of the neural network can grow large, making the network unstable and increasing the generalization error.This good practice of scaling 
+inputs applies whether using ReLU for your network or not.)
+-> Use Weight Penalty (By design, the output from ReLU is unbounded in the positive domain.This means that in some cases, the output 
+can continue to grow in size. As such, it may be a good idea to use a form of weight regularization, such as an L1 or L2 vector norm.
+Another problem could arise due to the unbounded behavior of the activations; one may thus want to use a regularizer to prevent 
+potential numerical problems. Therefore, we use the L1 penalty on the activation values, which also promotes additional sparsity)
+L1 & L2 norm ( https://machinelearningmastery.com/vector-norms-machine-learning/ )
+-> Extensions and Alternatives to ReLU ( The ReLU does have some limitations.Key among the limitations of ReLU is the case where large weight updates can mean that the summed input to the activation function is always negative, regardless of the input to the network.This means that a node with this problem will forever output an activation value of 0.0. This is referred to as a “dying ReLU“. )
+
+
+RO
+ReLU
+-> poate fi utilizat cu cele mai multe tipuri de rețele neuronale.
+-> Este recomandat implicit atât pentru rețelele neuronale multistrat (MLP) cât și pentru rețelele neuronale convoluționale (CNN).
+
+
+De ce este bun ReLu? Unitate liniară rectificată (ReLU)
+Https://machinelearningmastery.com/rectified-linear-activation-function-for-deep-learning-neural-networks/
+
++ Funcțiile de activare tangentă sigmoidă și hiperbolică nu pot fi utilizate în rețelele cu mai multe straturi din cauza problemei lipsă de gradient.
++ Funcția de activare liniară rectificată depășește gradientul de dispariție, permițând modelelor să învețe mai repede și să funcționeze mai bine.
++ Activarea liniară rectificată (ReLu) este activarea implicită la dezvoltarea Perceptronului multistrat și a rețelelor neuronale convoluționale.
+
+Funcția de activare sigmoidă (numită și funcția logistică)
+-> Intrarea în funcție este transformată într-o valoare cuprinsă între 0,0 și 1,0. Înregistrările care sunt mult mai mari decât 1.0 sunt
+Convertite în 1.0, în mod similar, valorile mult mai mici decât 0.0 sunt blocate la 0.0. Forma funcției pentru toți
+Intrările posibile sunt o formă S de la zero la 0,5 până la 1,0.
+
+Funcție tangentă hiperbolică (sau bronz pentru scurt)
+-> Este o funcție similară de activare neliniară care produce valori între -1,0 și 1,0.
+
+Funcția de activare sigmoidă și funcția tangentă hiperbolică (problemă)
+-> O problemă generală, atât cu funcțiile sigmoid, cât și cu tanh, este aceea că acestea se saturează. Aceasta înseamnă că valori mari
+Sunt prinse la 1,0, iar valorile mici sunt prinse la -1 sau 0, respectiv la tanh și sigmoid. Mai mult, funcțiile sunt sensibile la acestea
+Modificări în jurul punctului mediu al intrării lor, cum ar fi 0,5 pentru sigmoid și 0,0 pentru tanh.
+-> În sfârșit, deoarece capacitatea hardware a crescut prin rețele neuronale foarte profunde, folosind funcții
+Activarea sigmoidă și bronșică nu au putut fi ușor instruite.
+
+Rezumat
+-> poate fi utilizat cu cele mai multe tipuri de rețele neuronale.
+-> Este recomandat implicit atât pentru rețelele neuronale multistrat (MLP) cât și pentru rețelele neuronale convoluționale (CNN).
+-> Încercați o valoare de intrare cu prejudecată mai mică (el prejudecată este intrarea pe nodul care are o valoare fixă.
+Biasul are ca efect schimbarea funcției de activare și este tradițional să setați valoarea de intrare a prejudecății la 1.0.
+Când utilizați ReLU în rețeaua dvs., luați în considerare setarea prejudecății la o valoare mică, cum ar fi 0.1.
+... poate fi o bună practică să setați toate elementele [prejudecății] la o valoare pozitivă mică, cum ar fi 0.1. Acest lucru îl face foarte probabil
+că unitățile liniare rectificate vor fi inițial active pentru majoritatea intrărilor din setul de instruire și vor permite derivatelor să treacă.)
+-> Utilizați „He Initialization Weight” (Înainte de a antrena o rețea neuronală, greutățile rețelei trebuie inițializate la mic aleatoriu
+valori. Când utilizați ReLU în rețeaua dvs. și inițializați ponderi la valori aleatorii mici centrate pe zero, apoi în mod implicit jumătate din
+unitățile din rețea vor produce o valoare zero. De exemplu, după inițializarea uniformă a greutăților, aproximativ 50% din unitățile ascunse
+valorile de ieșire continuă sunt zerouri reale)
+-> Date de intrare la scară (este o practică bună să scalați datele de intrare înainte de a utiliza o rețea neuronală. Aceasta poate implica standardizarea variabilelor
+să aibă o medie și o varianță unitară sau să normalizeze fiecare valoare la scala de la 0 la 1. Fără scăderea datelor pe multe probleme, greutățile
+din rețeaua neurală poate crește mare, ceea ce face ca rețeaua să fie instabilă și crește eroarea de generalizare. Această bună practică de scalare
+intrările se aplică indiferent dacă utilizați ReLU pentru rețeaua dvs. sau nu.)
+-> Utilizați sancțiunea în greutate (după proiectare, producția de la ReLU este nelimitată în domeniul pozitiv. Aceasta înseamnă că, în unele cazuri, ieșirea
+poate continua să crească în dimensiune. Ca atare, poate fi o idee bună să folosești o formă de regularizare a greutății, cum ar fi o normă vectorială L1 sau L2.
+O altă problemă ar putea apărea din cauza comportamentului nelimitat al activărilor; s-ar putea astfel să doriți să utilizați un regulator pentru a preveni
+probleme numerice potențiale. Prin urmare, folosim penalizarea L1 la valorile de activare, care promovează și spațiu suplimentar)
+Norma L1 și L2 (https://machinelearningmastery.com/vector-norms-machine-learning/)
+-> Extensii și alternative la ReLU (ReLU are unele limitări. În rândul limitărilor ReLU este cazul în care actualizările de greutate mare pot însemna că intrarea însumată a funcției de activare este întotdeauna negativă, indiferent de intrarea în rețea. Aceasta înseamnă că un nod cu această problemă va scoate pentru totdeauna o valoare de activare de 0,0. Aceasta este denumită „ReLU pe moarte”.)
+
+
+
+
+
+
+
