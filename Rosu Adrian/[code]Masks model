@@ -171,3 +171,159 @@ Mask R-CNN
 Faster R-CNN
 Fast R-CNN
 R-CNN
+
+
+https://note.nkmk.me/en/python-opencv-numpy-alpha-blend-mask/
+2 imagini una in alta cod python
+
+https://likegeeks.com/python-image-processing/
+converting images to black and white
+
+Remove Background from an image
+To remove the background from an image, we will find the contours to detect edges of the main object and create a mask with np.zeros for the background and then combine the mask and the image using the bitwise_and operator.
+
+Consider the example below:
+
+Import the modules (NumPy and cv2):
+
+import cv2
+
+import numpy as np
+Read the image and convert the image into a grayscale image:
+
+img = cv2.imread("py.jpg")
+
+gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+Find the threshold:
+
+_, thresh = cv2.threshold(gray_img, 127, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+In the threshold() method, the last argument defines the style of the threshold. See Official documentation of OpenCV threshold.
+
+Find the image contours:
+
+img_contours = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)[-2]
+Sort the contours:
+
+img_contours = sorted(img_contours, key=cv2.contourArea)
+
+for i in img_contours:
+
+    if cv2.contourArea(i) > 100:
+
+        break
+Generate the mask using np.zeros:
+
+mask = np.zeros(img.shape[:2], np.uint8)
+Draw contours:
+
+cv2.drawContours(mask, [i],-1, 255, -1)
+Apply the bitwise_and operator:
+
+new_img = cv2.bitwise_and(img, img, mask=mask)
+Display the original image:
+
+cv2.imshow("Original Image", img)
+Image with background
+Display the resultant image:
+
+cv2.imshow("Image with background removed", new_img)
+
+cv2.waitKey(0)
+Remove background
+
+
+
+
+
+
+
+
+
+
+
+
+masking a image
+https://www.mathworks.com/matlabcentral/answers/38547-masking-out-image-area-using-binary-mask
+
+
+% Demo to have the user freehand draw an irregular shape over
+% a gray scale image, have it extract only that part to a new image,
+% and to calculate the mean intensity value of the image within that shape.
+%
+% Change the current folder to the folder of this m-file.
+if(~isdeployed)
+  cd(fileparts(which(mfilename)));
+end
+clc;  % Clear command window.
+clear;  % Delete all variables.
+close all;  % Close all figure windows except those created by imtool.
+imtool close all;  % Close all figure windows created by imtool.
+workspace;  % Make sure the workspace panel is showing.
+fontSize = 16;
+% Read in standard MATLAB gray scale demo image.
+grayImage = imread('cameraman.tif');
+subplot(2, 3, 1);
+imshow(grayImage, []);
+title('Original Grayscale Image', 'FontSize', fontSize);
+set(gcf, 'Position', get(0,'Screensize')); % Maximize figure.
+message = sprintf('Left click and hold to begin drawing.\nSimply lift the mouse button to finish');
+uiwait(msgbox(message));
+hFH = imfreehand();
+% Create a binary image ("mask") from the ROI object.
+binaryImage = hFH.createMask();
+% Display the freehand mask.
+subplot(2, 3, 2);
+imshow(binaryImage);
+title('Binary mask of the region', 'FontSize', fontSize);
+% Calculate the area, in pixels, that they drew.
+numberOfPixels1 = sum(binaryImage(:))
+% Another way to calculate it that takes fractional pixels into account.
+numberOfPixels2 = bwarea(binaryImage)
+% Get coordinates of the boundary of the freehand drawn region.
+structBoundaries = bwboundaries(binaryImage);
+xy=structBoundaries{1}; % Get n by 2 array of x,y coordinates.
+x = xy(:, 2); % Columns.
+y = xy(:, 1); % Rows.
+subplot(2, 3, 1); % Plot over original image.
+hold on; % Don't blow away the image.
+plot(x, y, 'LineWidth', 2);
+drawnow; % Force it to draw immediately.
+% Burn line into image by setting it to 255 wherever the mask is true.
+burnedImage = grayImage;
+burnedImage(binaryImage) = 255;
+% Display the image with the mask "burned in."
+subplot(2, 3, 3);
+imshow(burnedImage);
+caption = sprintf('New image with\nmask burned into image');
+title(caption, 'FontSize', fontSize);
+% Mask the image and display it.
+% Will keep only the part of the image that's inside the mask, zero outside mask.
+blackMaskedImage = grayImage;
+blackMaskedImage(~binaryImage) = 0;
+subplot(2, 3, 4);
+imshow(blackMaskedImage);
+title('Masked Outside Region', 'FontSize', fontSize);
+% Calculate the mean
+meanGL = mean(blackMaskedImage(binaryImage));
+% Report results.
+message = sprintf('Mean value within drawn area = %.3f\nNumber of pixels = %d\nArea in pixels = %.2f', ...
+meanGL, numberOfPixels1, numberOfPixels2);
+msgbox(message);
+% Now do the same but blacken inside the region.
+insideMasked = grayImage;
+insideMasked(binaryImage) = 0;
+subplot(2, 3, 5);
+imshow(insideMasked);
+title('Masked Inside Region', 'FontSize', fontSize);
+% Now crop the image.
+topLine = min(x);
+bottomLine = max(x);
+leftColumn = min(y);
+rightColumn = max(y);
+width = bottomLine - topLine + 1;
+height = rightColumn - leftColumn + 1;
+croppedImage = imcrop(blackMaskedImage, [topLine, leftColumn, width, height]);
+% Display cropped image.
+subplot(2, 3, 6);
+imshow(croppedImage);
+title('Cropped Image', 'FontSize', fontSize);
