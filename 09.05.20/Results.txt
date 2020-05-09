@@ -1,0 +1,7 @@
+id,label
+178, 0.9400609045317678, mediecav, medieple
+179, 0.8237143249270764, mediecav, medieple
+180, 0.9749145388603211, mediecav, medieple
+181, 0.9743400735239829, mediecav, medieple
+182, 0.9420525070392725, mediecav, medieple
+183, 0.8764838910308378, mediecav, medieple

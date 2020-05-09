@@ -1,0 +1,141 @@
+import cv2  # working with, mainly resizing, images
+import numpy as np  # dealing with arrays
+import os  # dealing with directories
+from random import shuffle  # mixing up or currently ordered data that might lead our network astray in training.
+from tqdm import tqdm  # a nice pretty percentage bar for tasks. Thanks to viewer Daniel BA1/4hler for this suggestion
+import csv
+
+from PIL import Image
+
+def def_labels_right_has_Tuberculosis(nume_pacient):
+    with open('D:\\Git\\CT_Report.csv', 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row[0] == nume_pacient:
+                if row[2] == '1':
+                    return [1, 0]  # has tbc
+                if row[2] == '0':
+                    return [0, 1]  # doesn't have tbc
+                break
+
+
+# getting the data
+TRAIN_DIR = 'D:\\Git\\Processed-Images-Right'
+TEST_DIR = 'D:\\Git\\test'
+LR = 1e-3
+IMG_SIZE = 64
+
+def create_train_data_for_tbc():
+    training_data = []
+    count = 0
+    subfolders = [f.path for f in os.scandir(TRAIN_DIR) if f.is_dir()]
+    for sub in subfolders:
+        print(sub[-3:])
+        label = def_labels_right_has_Tuberculosis(sub[-3:])
+        path = os.path.join(TRAIN_DIR, sub[-3:] + '\\FrontBack')
+        for root, dirs, files in os.walk(path):
+            # print("luam alt pacient")
+            for name in files:
+                # print("sunt aici la poza fiecarui pacient")
+                count = count + 1
+                img = cv2.imread(root + '\\' + name, cv2.IMREAD_GRAYSCALE)
+                #img = cv2.imread(root + '\\' + name)
+                img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
+                training_data.append([np.array(img), np.array(label)])
+
+        if int(sub[-3:]) == 100:
+            break
+
+    shuffle(training_data)
+    # np.save('train_data.npy', training_data)
+    print(count)
+    return training_data
+
+
+def create_test_data():
+    test_data = []
+    count = 0
+    subfolders = [f.path for f in os.scandir(TEST_DIR) if f.is_dir()]
+    for sub in subfolders:
+        print(sub[-3:])
+
+        testPath = os.path.join(TEST_DIR, sub[-3:] + '\\FrontBack')
+        for root, dirs, files in os.walk(testPath):
+            for name in files:
+                count = count+1
+                img = cv2.imread(root + '\\' + name, cv2.IMREAD_GRAYSCALE)
+                #img = cv2.imread(root + '\\' + name)
+                img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
+
+                test_data.append([np.array(img), name])
+
+        if int(sub[-3:]) == 183:
+            break
+
+    # shuffle(test_data)
+    # np.save('test_data.npy', test_data)
+    return test_data
+
+
+#reshape data to fit model
+
+train_data = create_train_data_for_tbc()
+test_data = create_test_data()
+
+train = train_data[:-100]
+test = train_data[-100:]
+
+easy = 1
+
+X = np.array([i[0] for i in train]).reshape(-1, IMG_SIZE, IMG_SIZE, easy)
+Y = np.array([i[1] for i in train])
+
+test_x = np.array([i[0] for i in test]).reshape(-1, IMG_SIZE, IMG_SIZE, easy)
+test_y = np.array([i[1] for i in test])
+
+
+from keras.models import Sequential
+from keras.layers import Dense, Conv2D, Flatten
+#create model
+model = Sequential()
+#add model layers
+model.add(Conv2D(64, kernel_size=3, activation='relu', input_shape=(IMG_SIZE, IMG_SIZE, easy)))
+model.add(Conv2D(32, kernel_size=3, activation='relu'))
+model.add(Flatten())
+model.add(Dense(2, activation='softmax'))
+
+#compile model using accuracy to measure model performance
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+model.fit(X, Y, validation_data=(test_x, test_y), epochs=2)
+
+
+with open('submission_file.csv', 'w') as f:
+    f.write('id,label\n')
+
+with open('submission_file.csv', 'a') as f:
+    value = '178'
+    avg = 0
+    cont = 0
+    valoare = 0
+    for data in tqdm(test_data):
+        img_num = data[1]
+
+        if value in img_num:
+
+            cont = cont + 1
+            img_data = data[0]
+            data = img_data.reshape(-1, IMG_SIZE, IMG_SIZE, easy)
+            model_out = model.predict([data])[0]
+            avg = avg + model_out[0]
+        else:
+            valoare = avg / cont
+            f.write('{}, {}, {}, {}\n'.format(value, valoare, 'mediecav', 'medieple'))
+            value1 = int(value)
+            value1 = value1 + 1
+            value = str(value1)
+
+            avg = 0
+            cont = 0
+    valoare = avg / cont
+    f.write('{}, {}, {}, {}\n'.format(value, valoare, 'mediecav', 'medieple'))
