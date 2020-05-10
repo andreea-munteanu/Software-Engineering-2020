@@ -2,6 +2,7 @@ a) Ce ati reusit sa faceti in aceasta iteratie?
 Rosu Adrian APRIL 27 - probleme internet si git
 Documentul original din aprilie - pentru laboratorul 9
 https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Laborator11RosuAdrian/Laborator11AdrianRosu.txt
+https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/about%20masks%20adrian%20rosu.txt
 
 Mask R-CNN for Object Detection and Segmentationhttps://arxiv.org/abs/1703.06870
 https://github.com/matterport/Mask_RCNN
