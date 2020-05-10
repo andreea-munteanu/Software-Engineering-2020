@@ -1,0 +1,56 @@
+C:\Users\ady_e\.conda\envs\tensorflow\python.exe "C:/Users/ady_e/Desktop/Unit Testing [CT SCAN][MASK] Test passed 0 Failure 6.py"
+FFFFFF
+======================================================================
+FAIL: test_LEFTLeftRight (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/ady_e/Desktop/Unit Testing [CT SCAN][MASK] Test passed 0 Failure 6.py", line 60, in test_LEFTLeftRight
+    self.assertEqual(found, 1, "[OnlyLeftLung\LeftRight]Nu am gasit imaginea: " + nume_poza_mask + " .")
+AssertionError: 0 != 1 : [OnlyLeftLung\LeftRight]Nu am gasit imaginea: CTR_TRN_001_z273.png .
+
+======================================================================
+FAIL: test_LEFTfrontBack (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/ady_e/Desktop/Unit Testing [CT SCAN][MASK] Test passed 0 Failure 6.py", line 22, in test_LEFTfrontBack
+    self.assertEqual(found, 1, '[OnlyLeftLung\FrontBack]Nu gaseste: ' + nume_poza_mask + '. ')
+AssertionError: 0 != 1 : [OnlyLeftLung\FrontBack]Nu gaseste: CTR_TRN_139_z181.png. 
+
+======================================================================
+FAIL: test_LEFTtopBottom (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/ady_e/Desktop/Unit Testing [CT SCAN][MASK] Test passed 0 Failure 6.py", line 41, in test_LEFTtopBottom
+    self.assertEqual(found, 1, "[OnlyLeftLung\TopBottom]Nu am gasit imaginea: " + nume_poza_mask + " .")
+AssertionError: 0 != 1 : [OnlyLeftLung\TopBottom]Nu am gasit imaginea: CTR_TRN_139_z033.png .
+
+======================================================================
+FAIL: test_RIGHTLeftRight (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/ady_e/Desktop/Unit Testing [CT SCAN][MASK] Test passed 0 Failure 6.py", line 118, in test_RIGHTLeftRight
+    self.assertEqual(found, 1, "[OnlyRightLung\LeftRight]Nu am gasit imaginea: " + nume_poza_mask + " .")
+AssertionError: 0 != 1 : [OnlyRightLung\LeftRight]Nu am gasit imaginea: CTR_TRN_001_z101.png .
+
+======================================================================
+FAIL: test_RIGHTfrontBack (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/ady_e/Desktop/Unit Testing [CT SCAN][MASK] Test passed 0 Failure 6.py", line 79, in test_RIGHTfrontBack
+    self.assertEqual(found, 1, "[OnlyRightLung\FrontBack]Nu am gasit imaginea: " + nume_poza_mask + " .")
+AssertionError: 0 != 1 : [OnlyRightLung\FrontBack]Nu am gasit imaginea: CTR_TRN_139_z181.png .
+
+======================================================================
+FAIL: test_RIGHTtopBottom (__main__.TestCase)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:/Users/ady_e/Desktop/Unit Testing [CT SCAN][MASK] Test passed 0 Failure 6.py", line 99, in test_RIGHTtopBottom
+    self.assertEqual(found, 1, "[OnlyRightLung\TopBottom]Nu am gasit imaginea: " + nume_poza_mask + " .")
+AssertionError: 0 != 1 : [OnlyRightLung\TopBottom]Nu am gasit imaginea: CTR_TRN_139_z033.png .
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.701s
+
+FAILED (failures=6)
+
+Process finished with exit code 1
