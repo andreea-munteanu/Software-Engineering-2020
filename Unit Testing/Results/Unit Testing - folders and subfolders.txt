@@ -1,0 +1,8 @@
+C:\Users\ady_e\.conda\envs\tensorflow\python.exe "D:/Unit Testin - folders and subfolders/Unit Testing - folders and subfolders.py"
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.349s
+
+OK
+
+Process finished with exit code 0

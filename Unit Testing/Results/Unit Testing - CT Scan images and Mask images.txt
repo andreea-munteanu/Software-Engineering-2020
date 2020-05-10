@@ -1,0 +1,181 @@
+Testing started at 11:24 AM ...
+C:\Users\ady_e\.conda\envs\tensorflow\python.exe "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\_jb_unittest_runner.py" --path "D:/Unit Testin - folders and subfolders/Unit Testing - CT Scan images and Mask images.py"
+Launching unittests with arguments python -m unittest D:/Unit Testin - folders and subfolders/Unit Testing - CT Scan images and Mask images.py in D:\Unit Testin - folders and subfolders
+
+
+[OnlyLeftLung\LeftRight']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.
+10254 != 9339
+
+Expected :9339
+Actual   :10254
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 9339 != 10254 : [OnlyLeftLung\LeftRight']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\Unit Testin - folders and subfolders\Unit Testing - CT Scan images and Mask images.py", line 87, in test_LEFTLeftRight
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask,"[OnlyLeftLung\LeftRight']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.")
+
+
+[OnlyLeftLung\FrontBack']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1 .
+20583 != 18961
+
+Expected :18961
+Actual   :20583
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 18961 != 20583 : [OnlyLeftLung\FrontBack']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1 .
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\Unit Testin - folders and subfolders\Unit Testing - CT Scan images and Mask images.py", line 31, in test_LEFTfrontBack
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask, "[OnlyLeftLung\FrontBack']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1 .")
+
+
+[OnlyLeftLung\TopBottom']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.
+5731 != 5377
+
+Expected :5377
+Actual   :5731
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 5377 != 5731 : [OnlyLeftLung\TopBottom']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\Unit Testin - folders and subfolders\Unit Testing - CT Scan images and Mask images.py", line 59, in test_LEFTtopBottom
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask,"[OnlyLeftLung\TopBottom']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.")
+
+
+[OnlyRightLung\LeftRight']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.
+10892 != 9056
+
+Expected :9056
+Actual   :10892
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 9056 != 10892 : [OnlyRightLung\LeftRight']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\Unit Testin - folders and subfolders\Unit Testing - CT Scan images and Mask images.py", line 171, in test_RIGHTLeftRight
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask,"[OnlyRightLung\LeftRight']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.")
+
+
+[OnlyRightLung\FrontBack']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1 .
+20583 != 18961
+
+Expected :18961
+Actual   :20583
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 18961 != 20583 : [OnlyRightLung\FrontBack']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1 .
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\Unit Testin - folders and subfolders\Unit Testing - CT Scan images and Mask images.py", line 115, in test_RIGHTfrontBack
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask, "[OnlyRightLung\FrontBack']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1 .")
+
+
+
+Ran 6 tests in 0.359s
+
+FAILED (failures=6)
+
+[OnlyRightLung\TopBottom']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.
+5731 != 5377
+
+Expected :5377
+Actual   :5731
+<Click to see difference>
+
+Traceback (most recent call last):
+  File "D:\Pycharm\PyCharm Community Edition 2019.3.4\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 5377 != 5731 : [OnlyRightLung\TopBottom']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 59, in testPartExecutor
+    yield
+  File "C:\Users\ady_e\.conda\envs\tensorflow\lib\unittest\case.py", line 605, in run
+    testMethod()
+  File "D:\Unit Testin - folders and subfolders\Unit Testing - CT Scan images and Mask images.py", line 143, in test_RIGHTtopBottom
+    self.assertEqual(countNumePozaCTScan, countNumePozaMask,"[OnlyRightLung\TopBottom']Numarul de imagini din CT Scan nu corespunde cu numarul de imagini din Mask1.")
+
+
+Assertion failed
+
+Process finished with exit code 1
+
+Assertion failed
+
+Assertion failed
+
+Tests failed: 6 of 6 tests - 353 ms
