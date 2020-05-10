@@ -1,0 +1,8 @@
+C:\Users\ady_e\.conda\envs\tensorflow\python.exe "C:/Users/ady_e/Desktop/Unit Testing [MASK][CT SCAN] Test passed 6.py"
+......
+----------------------------------------------------------------------
+Ran 6 tests in 7.455s
+
+OK
+
+Process finished with exit code 0
