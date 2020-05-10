@@ -6,5 +6,5 @@
 ### All images from training with the masks applied as of may 2020 (283 patients):
 ### https://tinyurl.com/y8mb86ct
 
-### All images and masks on preprocessing as of may 2020(283 train & 120 test):
+### All images and masks on preprocessing as of may 2020 (283 train & 120 test patients):
 ### https://tinyurl.com/y95oc7pe
