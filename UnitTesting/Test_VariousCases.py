@@ -6,7 +6,10 @@ import os
 import shutil
 import imageio
 import gc
+import time
 from skimage.transform import resize
+from skimage.util import img_as_ubyte
+from skimage import io
 
 
 
@@ -24,13 +27,14 @@ def slice_lr(image_array, inputfile, outputlr, from_slice, to_slice):
     for current_slice in range(from_slice, to_slice):
         data = numpy.rot90(image_array[current_slice, :, :])
         image_name = inputfile[:-7] + "_z" + "{:0>3}".format(str(current_slice + 1)) + ".png"
-
-        data = data.astype(numpy.float32)
-
+        #data = data.astype(numpy.float32)
+        data=numpy.divide(data,255)
+        print(data.dtype)
         data = resize(data, (512, 512))
-        imageio.imwrite(image_name, data)
+        data = img_as_ubyte(data)
+        io.imsave(image_name, data)
         src = image_name
-        shutil.move(src, outputlr)
+        #shutil.move(src, outputlr)
     gc.collect()
 
 
@@ -79,9 +83,9 @@ def niitopng(inputDirCT, inputDirM1, inputDirM2, from_image, to_image):
             j = "0" + str(i)
         elif i < 1000:
             j = str(i)
-        outputfolder = "C:\\Users\\denis\\Desktop\\TestScans\\" + j  # Output location
+        outputfolder = "C:\\Scans\\Processed\\" + j  # Output location
 
-        file_name = "CTR_TST_" + str(j) + ".nii.gz"
+        file_name = "CTR_TRN_" + str(j) + ".nii.gz"
 
         outputlrM1 = outputfolder + "\\Masks\\Mask1\\LeftRight"
         outputfbM1 = outputfolder + "\\Masks\\Mask1\\FrontBack"
@@ -97,7 +101,6 @@ def niitopng(inputDirCT, inputDirM1, inputDirM2, from_image, to_image):
         try:
 
             inputfileM1 = inputfileM1 + file_name
-
             if os.path.exists(inputfileM1) and os.stat(inputfileM1).st_size == 0:
                 return "Empty file detected"
 
@@ -110,22 +113,21 @@ def niitopng(inputDirCT, inputDirM1, inputDirM2, from_image, to_image):
 
             if os.path.exists(inputfileCT) and os.stat(inputfileCT).st_size == 0:
                 return "Empty file detected"
-
             image_arrayM1 = nibabel.load(inputfileM1).get_fdata()
-            image_arrayM1 = image_arrayM1.astype(numpy.int16)
+            #image_arrayM1 = image_arrayM1.astype(numpy.int16)
 
             image_arrayM2 = nibabel.load(inputfileM2).get_fdata()
-            image_arrayM2 = image_arrayM2.astype(numpy.int16)
+            #image_arrayM2 = image_arrayM2.astype(numpy.int16)
 
             image_arrayCT = nibabel.load(inputfileCT).get_fdata()
-            image_arrayCT = image_arrayCT.astype(numpy.int16)
+            #image_arrayCT = image_arrayCT.astype(numpy.int16)
+
 
 
         except FileNotFoundError:
             return "At least one of the files does not exist"
-        except Exception as e:
+        except Exception:
             return "Image is not a valid 3D Scan"
-
         if len(image_arrayM1.shape) == 3:
             # set destination folder
             if not os.path.exists(outputfolder):
@@ -177,25 +179,25 @@ def niitopng(inputDirCT, inputDirM1, inputDirM2, from_image, to_image):
             return "Image should be 3D"
     print("Succeded")
 
-
+processedScans="D:\\Software-Engineering-2020\\TrainCTRs"
+inputScans="C:\\Scans\\"
 class MyTestCase(unittest.TestCase):
     def test3DImageNotTakenIntoConsideration(self):
-        self.assertEqual("Image is not a valid 3D Scan", niitopng("C:\\Users\\denis\\Desktop\\CTs\\",
-                                  "C:\\Users\\denis\\Desktop\\Masks1\\",
-                                  "C:\\Users\\denis\\Desktop\\CTs\\", 620, 621))
+        self.assertEqual("Image is not a valid 3D Scan", niitopng(inputScans+"\\CTs\\",
+                                                                  inputScans + "\\Masks1\\",
+                                  inputScans+"\\Masks2\\", 620, 621))
 
 
     def testNumberOfImagesIsCorrect(self):
-        #niitopng("C:\\Users\\denis\\Desktop\\Masks1\\", "C:\\Users\\denis\\Desktop\\Masks2\\", "C:\\Users\\denis\\Desktop\\CTs\\", 1,2)
 
-        numberOfFilesFB = len([name for name in os.listdir('C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\CT Scan\\FrontBack')])
+        numberOfFilesFB = len([name for name in os.listdir(processedScans+'\\001\\CT Scan\\FrontBack')])
         numberOfFilesLR = len([name for name in os.listdir(
-            'C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\CT Scan\\LeftRight')])
+            processedScans+'\\001\\CT Scan\\LeftRight')])
         numberOfFilesTB = len([name for name in os.listdir(
-            'C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\CT Scan\\TopBottom')])
-        self.assertEqual(numberOfFilesFB, 74)
-        self.assertEqual(numberOfFilesLR, 95)
-        self.assertEqual(numberOfFilesTB, 31)
+            processedScans+'\\001\\CT Scan\\TopBottom')])
+        self.assertEqual(numberOfFilesFB, 68)
+        self.assertEqual(numberOfFilesLR, 64)
+        self.assertEqual(numberOfFilesTB, 23)
 
     def testAllZeros(self):
         listOfLists = [[]]
@@ -209,35 +211,32 @@ class MyTestCase(unittest.TestCase):
 
     def testFileExists(self):
         self.assertEqual("At least one of the files does not exist",
-            niitopng("C:\\Users\\denis\\Desktop\\CTs\\",
-                     "C:\\Users\\denis\\Desktop\\Masks1\\",
-                     "C:\\Users\\denis\\Desktop\\Masks2\\", 300, 320))
+            niitopng(inputScans+"\\CTs\\",
+                     inputScans+"\\Masks1\\",
+                     inputScans + "\\Masks2\\", 300, 320))
 
     def testSameNumberOfFiles(self):
-        #niitopng("C:\\Users\\denis\\Desktop\\CTs\\",
-         #        "C:\\Users\\denis\\Desktop\\Masks1\\",
-          #       "C:\\Users\\denis\\Desktop\\CTs\\", 1, 2)
 
         folderctFB = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\CT Scan\\FrontBack"))
+            processedScans+"\\001\\CT Scan\\FrontBack"))
         folderctLR = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\CT Scan\\LeftRight"))
+            processedScans+"\\001\\CT Scan\\LeftRight"))
         folderctTB = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\CT Scan\\TopBottom"))
+            processedScans+"\\001\\CT Scan\\TopBottom"))
 
         folderM1FB = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\Masks\\Mask1\\FrontBack"))
+            processedScans+"\\001\\Masks\\Mask1\\FrontBack"))
         folderM1LR = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\Masks\\Mask1\\LeftRight"))
+            processedScans+"\\001\\Masks\\Mask1\\LeftRight"))
         folderM1TB = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\Masks\\Mask1\\TopBottom"))
+            processedScans + "\\001\\Masks\\Mask1\\TopBottom"))
 
         folderM2FB = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\Masks\\Mask2\\FrontBack"))
+            processedScans+"\\001\\Masks\\Mask2\\FrontBack"))
         folderM2LR = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\Masks\\Mask2\\LeftRight"))
+            processedScans+"\\001\\Masks\\Mask2\\LeftRight"))
         folderM2TB = len(os.listdir(
-            "C:\\Users\\denis\\Desktop\\Software-Engineering2020\\LeftLung\\LeftLungAffected\\001\\Masks\\Mask2\\TopBottom"))
+            processedScans+"\\001\\Masks\\Mask2\\TopBottom"))
 
         self.assertEqual(folderctFB,folderM1FB)
         self.assertEqual(folderctFB,folderM2FB)
@@ -249,8 +248,30 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(folderctTB,folderM2TB)
 
     def testFileNotEmpty(self):
-        self.assertEqual("Empty file detected", niitopng("C:\\Users\\denis\\Desktop\\CTs\\", "C:\\Users\\denis\\Desktop\\Masks1\\",
-                                  "C:\\Users\\denis\\Desktop\\Masks2\\", 5, 6))
+        self.assertEqual("Empty file detected", niitopng(inputScans+"\\CTs\\",inputScans+"\\Masks1\\",
+                                  inputScans+"\\Masks2\\", 622, 623))
+    def test_suprascriere(self):
+        outputfolder =inputScans+"\\Processed\\079"
+        if os.path.exists(outputfolder):
+            old_time=time.ctime(os.path.getctime(outputfolder))
+            niitopng(inputScans+"\\CTs\\", inputScans+"\\Masks1\\",inputScans+"\\Masks2\\", 79, 80)
+            new_time=time.ctime(os.path.getctime(outputfolder))
+            self.assertTrue(old_time != new_time)
+        else:
+            niitopng(inputScans+"\\CTs\\", inputScans+"\\Masks1\\",inputScans+"\\Masks2\\", 79, 80)
+            new_time = time.ctime(os.path.getmtime(outputfolder))
+            self.assertTrue(new_time != 0)
+    def test_existentaFelii(self):
+        outputfolder = inputScans+"\\Processed\\079"
+        masksfolder = outputfolder + "\\Masks"
+        for subdir, dirs, files in os.walk(masksfolder):
+            for file in files:
+                filepath = subdir + os.sep + file
+                ct_file = filepath.replace("Masks\\Mask1\\OnlyLeftLung", "CT Scan")
+                ct_file = ct_file.replace("Masks\\Mask1\\OnlyRightLung", "CT Scan")
+                ct_file = ct_file.replace("Masks\\Mask1", "CT Scan")
+                ct_file = ct_file.replace("Masks\\Mask2", "CT Scan")
+                self.assertTrue(os.path.exists(ct_file))
 
 if __name__ == '__main__':
     unittest.main()
