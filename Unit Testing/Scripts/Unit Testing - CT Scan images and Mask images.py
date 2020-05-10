@@ -1,8 +1,10 @@
 import unittest
 import os
 
-
-class TestCase(unittest.TestCase):  # Testare daca exista masti Masks pentru CT Scan images
+# Testare daca exista acelasi numar de poze in \\Masks\\Mask1\\ OnlyLeftLung/OnlyRightLung \\ FrontBack/TopBottom/LeftRight
+# CT Scan Mask de forma XYZ subfoldere
+# Unit testing
+class TestCase(unittest.TestCase): 
     def test_LEFTfrontBack(self):
         TRAIN_DIR = 'D:\\Git\\TrainCTRs'
         countNumePozaMask = 0
