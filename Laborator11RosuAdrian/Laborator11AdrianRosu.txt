@@ -20,7 +20,7 @@ a) Ce ati reusit sa faceti in aceasta iteratie?
   https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Rosu%20Adrian/Why%20we%20use%20ReLu%3F%20De%20ce%20folosim%20ReLu%20(Rectified%20Linear%20Unit)
   Ajutat echipa SVM cu informatii despre ReLu
   
-  Am lucrat cu Emilia, Iulian si Teodor la stergerea si creearea de backup a pozelor care sunt mai inchise si a pozelor deschise la culoare pentru a vedea programul principal cum testeaza si cum antreneaza pozele pentru cele doua cazuri si daca sunt asemanari si deosebiri
+  Am lucrat cu Emilian, Iulian si Teodor la stergerea si creearea de backup a pozelor care sunt mai inchise si a pozelor deschise la culoare pentru a vedea programul principal cum testeaza si cum antreneaza pozele pentru cele doua cazuri si daca sunt asemanari si deosebiri
   
   Am cautat despre optimizarea programului de CNN folosind keras.tuner si asteptam sa editam programul de CNN astfel incat sa mearga si sa trainuiasca in asa fel inca CSV de output sa fie la fel cu CSV pacientilor care stim daca sunt bolnavi ( despre keras optimizer https://keras-team.github.io/keras-tuner/  https://www.youtube.com/watch?v=OzLAdpqm35E )
 b) Ce probleme ati avut?
