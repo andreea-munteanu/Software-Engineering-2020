@@ -1,8 +1,9 @@
 import unittest
 import os
 
-
-class TestCase(unittest.TestCase):  # Testare daca exista masti Masks pentru CT Scan images
+# Testare daca exista acelasi numar de subfoldere de tipul XYZ in Masti si CT Scan
+# Unit testing
+class TestCase(unittest.TestCase):  
     def test_LEFTfrontBack(self):
         TRAIN_DIR = 'D:\\Git\\TrainCTRs'
         countNumePozaMask = 0
