@@ -18,6 +18,7 @@ a) Ce ati reusit sa faceti in aceasta iteratie?
   Am cautat, inteles si parcurs tot ce tine de ReLu(Rectified Linear Unit) pentru a intelege tipul de activare si cum functioneaza 
   Aici am facut un rezumat RO+EN, m-am gandit ca trebuie sa stapanim tipurile de activare bine, de asemenea am cautat despre alte tipuri de activare Hyperbolic tangent function si Sigmoid activation function si am facut de asemenea rezumate
   https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Rosu%20Adrian/Why%20we%20use%20ReLu%3F%20De%20ce%20folosim%20ReLu%20(Rectified%20Linear%20Unit)
+  Ajutat echipa SVM cu informatii despre ReLu
   
   Am lucrat cu Emilia, Iulian si Teodor la stergerea si creearea de backup a pozelor care sunt mai inchise si a pozelor deschise la culoare pentru a vedea programul principal cum testeaza si cum antreneaza pozele pentru cele doua cazuri si daca sunt asemanari si deosebiri
   
