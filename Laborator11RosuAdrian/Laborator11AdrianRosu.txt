@@ -1,5 +1,5 @@
 a) Ce ati reusit sa faceti in aceasta iteratie?
-  Am inceput sa lucrez pe partea de UnitTesting
+  Am invatat ( https://www.youtube.com/watch?v=6tNS--WetLI ) si inceput sa lucrez pe partea de UnitTesting
   Aveti linkuri aici
 # Testare daca exista acelasi numar de poze in \\Masks\\Mask1\\ OnlyLeftLung/OnlyRightLung \\ FrontBack/TopBottom/LeftRight
 # CT Scan Mask de forma XYZ 
