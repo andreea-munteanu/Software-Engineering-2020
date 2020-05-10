@@ -1,0 +1,35 @@
+a) Ce ati reusit sa faceti in aceasta iteratie?
+  Am inceput sa lucrez pe partea de UnitTesting
+  Aveti linkuri aici
+# Testare daca exista acelasi numar de poze in \\Masks\\Mask1\\ OnlyLeftLung/OnlyRightLung \\ FrontBack/TopBottom/LeftRight
+# CT Scan Mask de forma XYZ 
+# Unit testing
+  https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Scripts/Unit%20Testing%20-%20CT%20Scan%20images%20and%20Mask%20images.py
+# Testare daca exista acelasi numar de subfoldere de tipul XYZ in Masti si CT Scan
+# Unit testing
+  https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Scripts/Unit%20Testing%20-%20folders%20and%20subfolders.py
+# Testare daca exista masti Masks pentru CT Scan images
+  https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Scripts/Unit%20Testing%20%5BCT%20SCAN%5D%5BMASK%5D%20Test%20passed%200%20Failure%206.py
+# Testare daca exista imagini CT Scan pentru masks
+  https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Scripts/Unit%20Testing%20%5BMASK%5D%5BCT%20SCAN%5D%20Test%20passed%206.py
+# REZULTATE UNIT TESTING
+  https://github.com/alexandrahanganu/Software-Engineering-2020/tree/CNN/Unit%20Testing/Results
+  
+  Am cautat, inteles si parcurs tot ce tine de ReLu(Rectified Linear Unit) pentru a intelege tipul de activare si cum functioneaza 
+  Aici am facut un rezumat RO+EN, m-am gandit ca trebuie sa stapanim tipurile de activare bine, de asemenea am cautat despre alte tipuri de activare Hyperbolic tangent function si Sigmoid activation function si am facut de asemenea rezumate
+  https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Rosu%20Adrian/Why%20we%20use%20ReLu%3F%20De%20ce%20folosim%20ReLu%20(Rectified%20Linear%20Unit)
+  
+  Am lucrat cu Emilia, Iulian si Teodor la stergerea si creearea de backup a pozelor care sunt mai inchise si a pozelor deschise la culoare pentru a vedea programul principal cum testeaza si cum antreneaza pozele pentru cele doua cazuri si daca sunt asemanari si deosebiri
+  
+  Am cautat despre optimizarea programului de CNN folosind keras.tuner si asteptam sa editam programul de CNN astfel incat sa mearga si sa trainuiasca in asa fel inca CSV de output sa fie la fel cu CSV pacientilor care stim daca sunt bolnavi ( despre keras optimizer https://keras-team.github.io/keras-tuner/  https://www.youtube.com/watch?v=OzLAdpqm35E )
+b) Ce probleme ati avut?
+  self.assert am gasit ceva probleme la functionarea in UnitTesting dar am putut sa facem intr-o maniera incat sa se comporte
+  self.assertEqual sau alte asserturi cum ar trebui sa se comporte
+  
+  Lucrand cu unit testing am gasit niste poze care sunt in plus la CT Scan alaturi de Carmen din echipa CNN, sunt multe la fel denumirea pentru ca exista OnlyLeftlung/OnlyRightLung + FrontBack/TopBottom/FrontRight
+  https://github.com/alexandrahanganu/Software-Engineering-2020/blob/CNN/Unit%20Testing/Results/CT_Scan_images_dont_have_masks.txt
+c) Ce planuri aveti in continuare?
+  Facut mai multe programe de unit testing la algoritmul de masti
+  Cautat si dat cod in continuare pentru optimizarea programului principal de CNN
+  Cautat si dat informatii despre programe CNN care functioneaza cu imagini asemanatoare
+  Asteptat algoritmul principal pentru a putea face unit testing pe el in functie de CSVuri si acuratete
